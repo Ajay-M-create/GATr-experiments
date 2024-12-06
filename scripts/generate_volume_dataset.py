@@ -6,7 +6,7 @@ import hydra
 import numpy as np
 import torch
 from scipy.spatial import ConvexHull
-
+import matplotlib.pyplot as plt
 
 def generate_volume_dataset(filename, num_samples, num_points=5):
     """Generates a dataset of random 5-point convex hulls and their volumes.
@@ -40,6 +40,15 @@ def generate_volume_dataset(filename, num_samples, num_points=5):
 
     points = np.array(points)  # Shape: (num_samples, num_points, 3)
     volumes = np.array(volumes)  # Shape: (num_samples,)
+
+    # Plot histogram of volumes
+    plt.figure(figsize=(10, 6))
+    plt.hist(volumes, bins=50, density=True)
+    plt.xlabel('Volume')
+    plt.ylabel('Density')
+    plt.title(f'Distribution of Volumes (n={num_samples})')
+    plt.savefig(str(Path(filename).parent / f'volume_dist_{Path(filename).stem}.png'))
+    plt.close()
 
     np.savez(filename, points=points, volumes=volumes)
 

@@ -41,3 +41,96 @@
 [2024-12-06 18:47:49 I]     output_reg = 0.0
 [2024-12-06 18:47:49 I]     mae = 0.0232549251139164
 [2024-12-06 18:47:49 I] Anders nog iets?
+[2024-12-06 20:17:19 I] Hoi.
+[2024-12-06 20:17:19 I] Set experiment surface_area with ID 2, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 20:17:19 I] Logger already initialized - hi again!
+[2024-12-06 20:17:19 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area
+[2024-12-06 20:17:19 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/config.yml
+[2024-12-06 20:17:20 I] Model has 1.58M learnable parameters
+[2024-12-06 20:17:20 I] Starting training
+[2024-12-06 20:17:20 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 20:17:20 I] Finished first forward pass with loss 0.5295981764793396
+[2024-12-06 20:17:35 I] Starting validation at step 1000
+[2024-12-06 20:17:36 E] Error plotting predictions for tag 'val': name 'np' is not defined
+[2024-12-06 20:17:36 E] Error plotting validation predictions at step 1000: name 'np' is not defined
+[2024-12-06 20:17:51 I] Starting validation at step 2000
+[2024-12-06 20:17:51 E] Error plotting predictions for tag 'val': name 'np' is not defined
+[2024-12-06 20:17:51 E] Error plotting validation predictions at step 2000: name 'np' is not defined
+[2024-12-06 20:18:06 I] Starting validation at step 3000
+[2024-12-06 20:18:07 E] Error plotting predictions for tag 'val': name 'np' is not defined
+[2024-12-06 20:18:07 E] Error plotting validation predictions at step 3000: name 'np' is not defined
+[2024-12-06 20:18:22 I] Starting validation at step 4000
+[2024-12-06 20:18:23 E] Error plotting predictions for tag 'val': name 'np' is not defined
+[2024-12-06 20:18:23 E] Error plotting validation predictions at step 4000: name 'np' is not defined
+[2024-12-06 20:18:37 I] Starting validation at step 5000
+[2024-12-06 20:18:38 E] Error plotting predictions for tag 'val': name 'np' is not defined
+[2024-12-06 20:18:38 E] Error plotting validation predictions at step 5000: name 'np' is not defined
+[2024-12-06 20:18:38 E] Error plotting predictions for tag 'val': name 'np' is not defined
+[2024-12-06 20:18:38 E] Error plotting validation predictions at step 5000: name 'np' is not defined
+[2024-12-06 20:18:38 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/models/model_final.pt
+[2024-12-06 20:18:38 E] Error plotting predictions for tag 'test': name 'np' is not defined
+[2024-12-06 20:18:38 I] Ran evaluation on dataset test:
+[2024-12-06 20:18:38 I]     loss = 0.0009409294623881578
+[2024-12-06 20:18:38 I]     mse = 0.0009409294623881578
+[2024-12-06 20:18:38 I]     rmse = 0.03046412900047571
+[2024-12-06 20:18:38 I]     output_reg = 0.0
+[2024-12-06 20:18:38 I]     mae = 0.0232549251139164
+[2024-12-06 20:18:39 E] Error plotting predictions for tag 'generalization': name 'np' is not defined
+[2024-12-06 20:18:39 I] Ran evaluation on dataset generalization:
+[2024-12-06 20:18:39 I]     loss = 0.18168194122314452
+[2024-12-06 20:18:39 I]     mse = 0.18168194122314452
+[2024-12-06 20:18:39 I]     rmse = 0.4260647359004275
+[2024-12-06 20:18:39 I]     output_reg = 0.0
+[2024-12-06 20:18:39 I]     mae = 0.4156177145481111
+[2024-12-06 20:18:39 I] Anders nog iets?
+[2024-12-06 20:19:15 I] Hoi.
+[2024-12-06 20:19:16 I] Set experiment surface_area with ID 2, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 20:19:16 I] Logger already initialized - hi again!
+[2024-12-06 20:19:16 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area
+[2024-12-06 20:19:16 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/config.yml
+[2024-12-06 20:19:16 I] Model has 1.58M learnable parameters
+[2024-12-06 20:19:16 I] Starting training
+[2024-12-06 20:19:16 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 20:19:16 I] Finished first forward pass with loss 0.5295981764793396
+[2024-12-06 20:19:33 I] Starting validation at step 1000
+[2024-12-06 20:19:34 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 20:19:34 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 20:19:51 I] Starting validation at step 2000
+[2024-12-06 20:19:51 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 20:19:52 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-06 20:20:08 I] Starting validation at step 3000
+[2024-12-06 20:20:08 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 20:20:09 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-06 20:20:23 I] Starting validation at step 4000
+[2024-12-06 20:20:24 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 20:20:24 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-06 20:20:39 I] Starting validation at step 5000
+[2024-12-06 20:20:39 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 20:20:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 20:20:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 20:20:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 20:20:40 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/models/model_final.pt
+[2024-12-06 20:20:41 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_generalization.png
+[2024-12-06 20:20:41 I] Ran evaluation on dataset generalization:
+[2024-12-06 20:20:41 I]     loss = 0.18168194122314452
+[2024-12-06 20:20:41 I]     mse = 0.18168194122314452
+[2024-12-06 20:20:41 I]     rmse = 0.4260647359004275
+[2024-12-06 20:20:41 I]     output_reg = 0.0
+[2024-12-06 20:20:41 I]     mae = 0.4156177145481111
+[2024-12-06 20:20:42 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_test.png
+[2024-12-06 20:20:42 I] Ran evaluation on dataset test:
+[2024-12-06 20:20:42 I]     loss = 0.0009409294623881578
+[2024-12-06 20:20:42 I]     mse = 0.0009409294623881578
+[2024-12-06 20:20:42 I]     rmse = 0.03046412900047571
+[2024-12-06 20:20:42 I]     output_reg = 0.0
+[2024-12-06 20:20:42 I]     mae = 0.0232549251139164
+[2024-12-06 20:20:42 I] Anders nog iets?
+[2024-12-06 20:47:17 I] Hoi.
+[2024-12-06 20:47:17 I] Set experiment surface_area with ID 2, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 20:47:17 I] Logger already initialized - hi again!
+[2024-12-06 20:47:17 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area
+[2024-12-06 20:47:17 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/config.yml
+[2024-12-06 20:47:18 I] Model has 1.58M learnable parameters
+[2024-12-06 20:47:18 I] Starting training
+[2024-12-06 20:47:18 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 20:47:18 I] Finished first forward pass with loss 0.5295981764793396

@@ -1,0 +1,22 @@
+_target_: gatr.experiments.symmetry.wrappers.SymmetryGATrWrapper
+
+net:
+  _target_: gatr.nets.GATr
+
+  in_mv_channels: 1
+  out_mv_channels: 16
+  hidden_mv_channels: 32
+
+  in_s_channels: 0
+  out_s_channels: 1
+  hidden_s_channels: 256
+
+  num_blocks: 12
+  checkpoint_blocks: false
+  reinsert_mv_channels: null
+  reinsert_s_channels: null
+  dropout_prob: null
+
+defaults:
+  - /base_attention@net.attention
+  - /base_mlp@net.mlp

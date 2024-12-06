@@ -195,7 +195,7 @@ class VolumeExperiment(BaseExperiment):
         
         # Get model type from the experiment config class path
         if hasattr(self.cfg.model, '_target_'):
-            model_type = self.cfg.model._target_.split('.')[-1]  # Gets the class name from the full path
+            model_type = self.cfg.model._target_.split('.')[-1].replace('Wrapper', '').replace('Volume', '')  # Gets the class name from the full path
         else:
             model_type = "Unknown Model"
         
@@ -215,7 +215,8 @@ class VolumeExperiment(BaseExperiment):
         plt.text(0.95, 0.05, annotation_text, horizontalalignment='right', 
                 verticalalignment='bottom', transform=plt.gca().transAxes, 
                 fontsize=10, bbox=dict(facecolor='white', alpha=0.8, 
-                                     boxstyle='round,pad=0.5'))
+                                     boxstyle='round,pad=0.5',
+                                     edgecolor='black', linestyle='--'))
         
         # Create title
         main_title = f'{model_type} - {task_type}'

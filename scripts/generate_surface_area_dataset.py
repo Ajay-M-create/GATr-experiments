@@ -6,6 +6,7 @@ import hydra
 import numpy as np
 import torch
 from scipy.spatial import ConvexHull
+import matplotlib.pyplot as plt
 
 
 def generate_surface_area_dataset(filename, num_samples, num_points=5):
@@ -40,6 +41,15 @@ def generate_surface_area_dataset(filename, num_samples, num_points=5):
 
     points = np.array(points)  # Shape: (num_samples, num_points, 3)
     surface_areas = np.array(surface_areas)  # Shape: (num_samples,)
+
+    # Plot histogram of surface areas
+    plt.figure(figsize=(10, 6))
+    plt.hist(surface_areas, bins=50, density=True)
+    plt.xlabel('Surface Area')
+    plt.ylabel('Density')
+    plt.title(f'Distribution of Surface Areas (n={num_samples})')
+    plt.savefig(str(Path(filename).parent / f'surface_area_dist_{Path(filename).stem}.png'))
+    plt.close()
 
     np.savez(filename, points=points, surface_areas=surface_areas)
 

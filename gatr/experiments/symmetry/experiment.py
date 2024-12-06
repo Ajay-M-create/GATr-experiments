@@ -1,5 +1,3 @@
-# Copyright (c) 2023 Qualcomm Technologies, Inc.
-# All rights reserved.
 from pathlib import Path
 import os
 from collections import defaultdict
@@ -12,14 +10,14 @@ import torch
 import matplotlib.pyplot as plt
 
 from gatr.experiments.base_experiment import BaseExperiment
-from gatr.experiments.surface_area.dataset import SurfaceAreaDataset
+from gatr.experiments.symmetry.dataset import SymmetryDataset
 from gatr.utils.misc import get_batchsize
 from gatr.utils.logger import logger
 from gatr.utils.mlflow import log_mlflow
 
 
-class SurfaceAreaExperiment(BaseExperiment):
-    """Experiment manager for surface area prediction.
+class SymmetryExperiment(BaseExperiment):
+    """Experiment manager for symmetry prediction.
 
     Parameters
     ----------
@@ -55,7 +53,7 @@ class SurfaceAreaExperiment(BaseExperiment):
 
         filename = Path(self.cfg.data.data_dir) / f"{tag}.npz"
         keep_extra = tag == "val"
-        return SurfaceAreaDataset(
+        return SymmetryDataset(
             filename, subsample=subsample_fraction, keep_extra=keep_extra
         )
 
@@ -175,7 +173,7 @@ class SurfaceAreaExperiment(BaseExperiment):
             self._actuals[self._current_eval_tag] = [y_true]
 
     def _plot_predictions(self, tag, step=None):
-        """Plots predictions vs actual surface areas and saves the plot as a .png file.
+        """Plots predictions vs actual symmetries and saves the plot as a .png file.
 
         Parameters
         ----------
@@ -190,19 +188,12 @@ class SurfaceAreaExperiment(BaseExperiment):
             return
 
         # Concatenate all predictions and actuals
-        try:
-            preds = torch.cat(self._predictions[tag], dim=0).numpy()
-            actuals = torch.cat(self._actuals[tag], dim=0).numpy()
-        except RuntimeError as e:
-            logger.error(f"Error concatenating predictions for tag '{tag}': {str(e)}")
-            return
-        # Calculate MSE and MAE
-        mse = np.mean((preds - actuals) ** 2)
-        mae = np.mean(np.abs(preds - actuals))
-
+        preds = torch.cat(self._predictions[tag], dim=0).numpy()
+        actuals = torch.cat(self._actuals[tag], dim=0).numpy()
+        
         # Get model type from the experiment config class path
         if hasattr(self.cfg.model, '_target_'):
-            model_type = self.cfg.model._target_.split('.')[-1].replace('Wrapper', '').replace('SurfaceArea', '')  # Gets the class name from the full path
+            model_type = self.cfg.model._target_.split('.')[-1].replace('Wrapper', '').replace('Symmetry', '')  # Gets the class name from the full path
         else:
             model_type = "Unknown Model"
         
@@ -216,6 +207,8 @@ class SurfaceAreaExperiment(BaseExperiment):
         plt.ylabel('Predicted Values')
         
         # Calculate and add metric annotations
+        mse = np.mean((preds - actuals) ** 2)
+        mae = np.mean(np.abs(preds - actuals))
         annotation_text = f"MSE: {mse:.2e}\nMAE: {mae:.2e}"
         plt.text(0.95, 0.05, annotation_text, horizontalalignment='right', 
                 verticalalignment='bottom', transform=plt.gca().transAxes, 
@@ -228,7 +221,7 @@ class SurfaceAreaExperiment(BaseExperiment):
         subtitle = f'Predictions vs Actuals ({tag.capitalize()})'
         if step is not None:
             subtitle += f' - Step {step}'
-        
+            
         plt.title(f'{main_title}\n{subtitle}', pad=15)
         plt.grid(True)
 
@@ -337,4 +330,4 @@ class SurfaceAreaExperiment(BaseExperiment):
         for key, val in metrics.items():
             log_mlflow(f"val.{key}", val, step=step)
         
-        return metrics 
+        return metrics
