@@ -21,31 +21,37 @@ def compute_symmetry_score(points):
 def generate_symmetry_dataset(filename, num_samples, num_points=5):
     """Generates a dataset of random convex hulls and their symmetry scores."""
     assert not Path(filename).exists(), f"File {filename} already exists!"
-    symmetry_scores = []
+    symmetries = []
     points = []
 
     for _ in range(num_samples):
+        # Generate random points in [0, 1]^3
         pts = np.random.uniform(0, 1, size=(num_points, 3))
+        points.append(pts)
+
+        # Compute symmetry score
         try:
             hull = ConvexHull(pts)
             convex_hull_points = pts[hull.vertices]
             score = compute_symmetry_score(convex_hull_points)
-            symmetry_scores.append(score)
-            points.append(convex_hull_points)
-        except Exception as e:
-            print(f"Error computing symmetry: {e}")
-            symmetry_scores.append(0.0)
+            symmetries.append(score)
+        except Exception:
+            # If points are degenerate, symmetry is zero
+            symmetries.append(0.0)
+
+    points = np.array(points)  # Shape: (num_samples, num_points, 3)
+    symmetries = np.array(symmetries)  # Shape: (num_samples,)
 
     # Plot histogram of symmetry scores
     plt.figure(figsize=(10, 6))
-    plt.hist(symmetry_scores, bins=50, density=True)
+    plt.hist(symmetries, bins=50, density=True)
     plt.xlabel('Symmetry Score')
     plt.ylabel('Density')
     plt.title(f'Distribution of Symmetry Scores (n={num_samples})')
     plt.savefig(str(Path(filename).parent / f'symmetry_dist_{Path(filename).stem}.png'))
     plt.close()
 
-    np.savez(filename, points=np.array(points), symmetry_scores=np.array(symmetry_scores))
+    np.savez(filename, points=points, symmetries=symmetries)
 
 def generate_datasets(path):
     """Generates train, validation, test, and generalization datasets.
