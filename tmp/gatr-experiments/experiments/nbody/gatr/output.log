@@ -1,0 +1,37 @@
+[2024-12-05 21:55:33 I] Hoi.
+[2024-12-05 21:55:33 I] Created experiment nbody with ID 1
+[2024-12-05 21:55:33 I] Set experiment nbody with ID 1, artifact location file:/storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/tracking/artifacts
+[2024-12-05 21:55:33 I] Logger already initialized - hi again!
+[2024-12-05 21:55:33 I] Running experiment at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr
+[2024-12-05 21:55:33 I] Saving config at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr/config.yml
+[2024-12-05 21:55:34 I] Model has 2.21M learnable parameters
+[2024-12-05 21:55:34 I] Starting training
+[2024-12-05 21:55:34 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-05 21:55:34 I] Finished first forward pass with loss 0.05580032616853714
+[2024-12-05 22:23:12 I] Hoi.
+[2024-12-05 22:23:12 I] Set experiment nbody with ID 1, artifact location file:/storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/tracking/artifacts
+[2024-12-05 22:23:12 I] Logger already initialized - hi again!
+[2024-12-05 22:23:12 I] Running experiment at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr
+[2024-12-05 22:23:12 I] Saving config at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr/config.yml
+[2024-12-05 22:23:13 I] Model has 2.21M learnable parameters
+[2024-12-05 22:23:13 I] Starting training
+[2024-12-05 22:23:13 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-05 22:23:13 I] Finished first forward pass with loss 0.05580032616853714
+[2024-12-05 22:26:04 I] Hoi.
+[2024-12-05 22:26:04 I] Set experiment nbody with ID 1, artifact location file:/storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/tracking/artifacts
+[2024-12-05 22:26:04 I] Logger already initialized - hi again!
+[2024-12-05 22:26:04 I] Running experiment at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr
+[2024-12-05 22:26:04 I] Saving config at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr/config.yml
+[2024-12-05 22:26:05 I] Model has 2.21M learnable parameters
+[2024-12-05 22:26:05 I] Starting training
+[2024-12-05 22:26:05 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-05 22:26:05 I] Finished first forward pass with loss 0.05580032616853714
+[2024-12-05 22:30:30 I] Hoi.
+[2024-12-05 22:30:30 I] Set experiment nbody with ID 1, artifact location file:/storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/tracking/artifacts
+[2024-12-05 22:30:30 I] Logger already initialized - hi again!
+[2024-12-05 22:30:30 I] Running experiment at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr
+[2024-12-05 22:30:30 I] Saving config at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/nbody/gatr/config.yml
+[2024-12-05 22:30:30 I] Model has 2.21M learnable parameters
+[2024-12-05 22:30:30 I] Starting training
+[2024-12-05 22:30:30 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-05 22:30:31 I] Finished first forward pass with loss 0.05580032616853714

@@ -1,0 +1,50 @@
+[2024-12-06 01:56:20 I] Hoi.
+[2024-12-06 01:56:20 I] Created experiment surface_area with ID 3
+[2024-12-06 01:56:20 I] Set experiment surface_area with ID 3, artifact location file:/storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 01:56:20 I] Logger already initialized - hi again!
+[2024-12-06 01:56:20 I] Running experiment at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area
+[2024-12-06 01:56:20 I] Saving config at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/config.yml
+[2024-12-06 01:56:20 I] Model has 1.58M learnable parameters
+[2024-12-06 01:56:20 I] Starting training
+[2024-12-06 01:58:19 I] Hoi.
+[2024-12-06 01:58:19 I] Set experiment surface_area with ID 3, artifact location file:/storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 01:58:19 I] Logger already initialized - hi again!
+[2024-12-06 01:58:19 I] Running experiment at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area
+[2024-12-06 01:58:19 I] Saving config at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/config.yml
+[2024-12-06 01:58:19 I] Model has 1.58M learnable parameters
+[2024-12-06 01:58:19 I] Starting training
+[2024-12-06 01:58:19 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 01:58:20 I] Finished first forward pass with loss 0.5295981764793396
+[2024-12-06 01:58:27 I] Starting validation at step 1000
+[2024-12-06 01:58:27 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 01:58:27 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 01:58:34 I] Starting validation at step 2000
+[2024-12-06 01:58:35 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 01:58:35 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-06 01:58:42 I] Starting validation at step 3000
+[2024-12-06 01:58:42 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 01:58:42 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-06 01:58:50 I] Starting validation at step 4000
+[2024-12-06 01:58:50 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 01:58:50 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-06 01:58:57 I] Starting validation at step 5000
+[2024-12-06 01:58:57 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 01:58:58 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 01:58:58 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val.png
+[2024-12-06 01:58:58 I] Saved predictions vs actuals plot for 'val' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 01:58:58 I] Saving model at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/models/model_final.pt
+[2024-12-06 01:58:58 I] Saved predictions vs actuals plot for 'generalization' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_generalization.png
+[2024-12-06 01:58:58 I] Ran evaluation on dataset generalization:
+[2024-12-06 01:58:58 I]     loss = 0.18168194122314452
+[2024-12-06 01:58:58 I]     mse = 0.18168194122314452
+[2024-12-06 01:58:58 I]     rmse = 0.4260647359004275
+[2024-12-06 01:58:58 I]     output_reg = 0.0
+[2024-12-06 01:58:58 I]     mae = 0.4156177145481111
+[2024-12-06 01:58:59 I] Saved predictions vs actuals plot for 'test' at /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area/metrics/predictions_vs_actuals_test.png
+[2024-12-06 01:58:59 I] Ran evaluation on dataset test:
+[2024-12-06 01:58:59 I]     loss = 0.0009409294623881578
+[2024-12-06 01:58:59 I]     mse = 0.0009409294623881578
+[2024-12-06 01:58:59 I]     rmse = 0.03046412900047571
+[2024-12-06 01:58:59 I]     output_reg = 0.0
+[2024-12-06 01:58:59 I]     mae = 0.0232549251139164
+[2024-12-06 01:58:59 I] Anders nog iets?

@@ -1,0 +1,15 @@
+# pytest
+.coverage
+.pytest
+.pytest_cache
+
+# Python
+*__pycache__*
+*.egg-info
+*.py[cod]
+
+/tmp/gatr-experiments/data
+.git copy/
+refs/
+tmp/gatr-experiments/tracking/
+/tmp/gatr-experiments/tracking/mlflow.db
