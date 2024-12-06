@@ -1,5 +1,5 @@
 model:
-  _target_: gatr.experiments.volume.wrappers.VolumeTransformerWrapper
+  _target_: gatr.experiments.surface_area.wrappers.SurfaceAreaTransformerWrapper
   net:
     _target_: gatr.baselines.BaselineTransformer
     in_channels: 3
@@ -8,15 +8,15 @@ model:
     num_blocks: 12
     num_heads: 8
     pos_encoding: false
-exp_name: volume
-run_name: transformer_volume
-base_dir: /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments
+exp_name: surface_area
+run_name: transformer_surface_area
+base_dir: /home/ajay/GATr-experiments/tmp/gatr-experiments
 exp_dir: ${base_dir}/experiments/${exp_name}/${run_name}
 seed: 42
 debug: false
 checkpoint: null
 data:
-  data_dir: ${base_dir}/data/volume
+  data_dir: ${base_dir}/data/surface_area
   subsample: 0.01
   mv_channels_in: 1
   mv_channels_out: 1

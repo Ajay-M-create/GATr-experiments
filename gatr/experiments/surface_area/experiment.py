@@ -195,7 +195,14 @@ class SurfaceAreaExperiment(BaseExperiment):
         except RuntimeError as e:
             logger.error(f"Error concatenating predictions for tag '{tag}': {str(e)}")
             return
+        # Calculate MSE and MAE
+        mse = np.mean((preds - actuals) ** 2)
+        mae = np.mean(np.abs(preds - actuals))
 
+        # Format metrics in scientific notation
+        mse_text = f'MSE: {mse:.2e}'
+        mae_text = f'MAE: {mae:.2e}'
+        
         plt.figure(figsize=(8, 6))
         plt.scatter(actuals, preds, alpha=0.5)
         plt.plot([actuals.min(), actuals.max()], [actuals.min(), actuals.max()], 'r--')

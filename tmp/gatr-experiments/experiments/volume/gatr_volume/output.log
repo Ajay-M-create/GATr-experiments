@@ -1,0 +1,124 @@
+[2024-12-06 18:48:25 I] Hoi.
+[2024-12-06 18:48:25 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 18:48:25 I] Logger already initialized - hi again!
+[2024-12-06 18:48:25 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 18:48:25 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 18:48:26 I] Model has 10.58M learnable parameters
+[2024-12-06 18:48:26 I] Starting training
+[2024-12-06 18:48:26 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 18:48:27 I] Finished first forward pass with loss 0.22894150018692017
+[2024-12-06 18:51:01 I] Starting validation at step 1000
+[2024-12-06 18:51:05 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 18:51:05 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 18:53:32 I] Starting validation at step 2000
+[2024-12-06 18:53:35 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 18:53:36 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-06 18:55:51 I] Starting validation at step 3000
+[2024-12-06 18:55:54 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 18:55:54 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-06 18:58:16 I] Starting validation at step 4000
+[2024-12-06 18:58:19 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 18:58:20 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-06 19:00:44 I] Starting validation at step 5000
+[2024-12-06 19:00:48 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 19:00:48 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 19:00:52 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 19:00:52 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 19:00:52 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/models/model_final.pt
+[2024-12-06 19:00:55 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_generalization.png
+[2024-12-06 19:00:55 I] Ran evaluation on dataset generalization:
+[2024-12-06 19:00:55 I]     loss = 0.01794475750923157
+[2024-12-06 19:00:55 I]     mse = 0.017826015985012055
+[2024-12-06 19:00:56 I]     rmse = 0.13382239530080356
+[2024-12-06 19:00:56 I]     output_reg = 0.011874157565832136
+[2024-12-06 19:00:56 I]     mae = 0.12456559684276577
+[2024-12-06 19:00:59 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_test.png
+[2024-12-06 19:00:59 I] Ran evaluation on dataset test:
+[2024-12-06 19:00:59 I]     loss = 0.00012367200115695598
+[2024-12-06 19:00:59 I]     mse = 3.53458371711895e-05
+[2024-12-06 19:00:59 I]     rmse = 0.011072806280608938
+[2024-12-06 19:00:59 I]     output_reg = 0.008832616522908215
+[2024-12-06 19:00:59 I]     mae = 0.004095877750217914
+[2024-12-06 19:00:59 I] Anders nog iets?
+[2024-12-06 19:18:27 I] Hoi.
+[2024-12-06 19:18:27 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 19:18:27 I] Logger already initialized - hi again!
+[2024-12-06 19:18:27 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 19:18:27 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 19:18:28 I] Model has 10.58M learnable parameters
+[2024-12-06 19:18:28 I] Starting training
+[2024-12-06 19:18:28 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 19:18:28 I] Finished first forward pass with loss 0.22894150018692017
+[2024-12-06 19:18:51 I] Hoi.
+[2024-12-06 19:18:51 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 19:18:51 I] Logger already initialized - hi again!
+[2024-12-06 19:18:51 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 19:18:51 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 19:18:52 I] Model has 10.58M learnable parameters
+[2024-12-06 19:18:52 I] Starting training
+[2024-12-06 19:18:52 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 19:18:53 I] Finished first forward pass with loss 0.22894150018692017
+[2024-12-06 19:21:10 I] Starting validation at step 1000
+[2024-12-06 19:21:13 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 19:21:14 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 19:25:15 I] Hoi.
+[2024-12-06 19:25:15 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 19:25:15 I] Logger already initialized - hi again!
+[2024-12-06 19:25:15 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 19:25:15 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 19:25:16 I] Model has 10.58M learnable parameters
+[2024-12-06 19:25:16 I] Starting training
+[2024-12-06 19:25:16 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 19:25:16 I] Finished first forward pass with loss 0.22894150018692017
+[2024-12-06 19:27:45 I] Starting validation at step 1000
+[2024-12-06 19:27:48 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 19:27:49 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 19:31:31 I] Hoi.
+[2024-12-06 19:31:32 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 19:31:32 I] Logger already initialized - hi again!
+[2024-12-06 19:31:32 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 19:31:32 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 19:31:32 I] Model has 10.58M learnable parameters
+[2024-12-06 19:31:32 I] Starting training
+[2024-12-06 19:31:32 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 19:31:33 I] Finished first forward pass with loss 0.22894150018692017
+[2024-12-06 19:34:06 I] Starting validation at step 1000
+[2024-12-06 19:34:09 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 19:34:10 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 19:35:29 I] Hoi.
+[2024-12-06 19:35:30 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 19:35:30 I] Logger already initialized - hi again!
+[2024-12-06 19:35:30 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 19:35:30 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 19:35:30 I] Model has 10.58M learnable parameters
+[2024-12-06 19:35:30 I] Starting training
+[2024-12-06 19:35:30 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 19:35:31 I] Finished first forward pass with loss 0.22894150018692017
+[2024-12-06 19:38:04 I] Starting validation at step 1000
+[2024-12-06 19:38:07 E] Error plotting predictions for tag 'val': Key 'name' is not in struct
+    full_key: model.name
+    object_type=dict
+[2024-12-06 19:38:07 E] Error plotting validation predictions at step 1000: Key 'name' is not in struct
+    full_key: model.name
+    object_type=dict
+[2024-12-06 19:44:18 I] Hoi.
+[2024-12-06 19:44:19 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 19:44:19 I] Logger already initialized - hi again!
+[2024-12-06 19:44:19 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 19:44:19 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 19:44:19 I] Model has 10.58M learnable parameters
+[2024-12-06 19:44:19 I] Starting training
+[2024-12-06 19:44:19 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 19:44:20 I] Finished first forward pass with loss 0.22894150018692017
+[2024-12-06 19:46:51 I] Starting validation at step 1000
+[2024-12-06 19:46:54 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-06 19:46:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 19:47:51 I] Hoi.
+[2024-12-06 19:47:51 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 19:47:51 I] Logger already initialized - hi again!
+[2024-12-06 19:47:51 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume
+[2024-12-06 19:47:51 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume/config.yml
+[2024-12-06 19:47:52 I] Model has 10.58M learnable parameters
+[2024-12-06 19:47:52 I] Starting training
+[2024-12-06 19:47:52 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 19:47:52 I] Finished first forward pass with loss 0.22894150018692017

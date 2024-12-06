@@ -36,7 +36,7 @@ model:
   _target_: gatr.experiments.surface_area.wrappers.SurfaceAreaGATrWrapper
 exp_name: surface_area
 run_name: gatr_surface_area
-base_dir: /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments
+base_dir: /home/ajay/GATr-experiments/tmp/gatr-experiments
 exp_dir: ${base_dir}/experiments/${exp_name}/${run_name}
 seed: 42
 debug: false

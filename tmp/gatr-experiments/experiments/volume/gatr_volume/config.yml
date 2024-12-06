@@ -36,7 +36,7 @@ model:
   _target_: gatr.experiments.volume.wrappers.VolumeGATrWrapper
 exp_name: volume
 run_name: gatr_volume
-base_dir: /storage_bizon/sabrant_rocket_2tb/ajay/repositories/ajay_code/geometric-algebra-transformer/tmp/gatr-experiments
+base_dir: /home/ajay/GATr-experiments/tmp/gatr-experiments
 exp_dir: ${base_dir}/experiments/${exp_name}/${run_name}
 seed: 42
 debug: false

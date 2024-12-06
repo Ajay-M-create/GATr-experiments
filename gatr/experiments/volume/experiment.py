@@ -6,6 +6,7 @@ from collections import defaultdict
 from typing import Dict
 from tqdm import tqdm
 import pandas as pd
+import numpy as np
 
 import torch
 import matplotlib.pyplot as plt
@@ -189,35 +190,40 @@ class VolumeExperiment(BaseExperiment):
             return
 
         # Concatenate all predictions and actuals
-        try:
-            preds = torch.cat(self._predictions[tag], dim=0).numpy()
-            actuals = torch.cat(self._actuals[tag], dim=0).numpy()
-        except RuntimeError as e:
-            logger.error(f"Error concatenating predictions for tag '{tag}': {str(e)}")
-            return
-
+        preds = torch.cat(self._predictions[tag], dim=0).numpy()
+        actuals = torch.cat(self._actuals[tag], dim=0).numpy()
+        
+        # Get model type from the experiment config class path
+        if hasattr(self.cfg.model, '_target_'):
+            model_type = self.cfg.model._target_.split('.')[-1]  # Gets the class name from the full path
+        else:
+            model_type = "Unknown Model"
+        
+        # Get task type from the experiment class name
+        task_type = self.__class__.__name__.replace('Experiment', '')
+        
         plt.figure(figsize=(8, 6))
         plt.scatter(actuals, preds, alpha=0.5)
         plt.plot([actuals.min(), actuals.max()], [actuals.min(), actuals.max()], 'r--')
-        plt.xlabel('Actual Volumes')
-        plt.ylabel('Predicted Volumes')
+        plt.xlabel('Actual Values')
+        plt.ylabel('Predicted Values')
         
-        # Add metric annotations in scientific notation
-        metrics = self.metrics.get(tag, {})
-        mse = metrics.get('mse', None)
-        mae = metrics.get('mae', None)
-        print(f"MSE: {mse}, MAE: {mae}")
-        if mse is not None and mae is not None:
-            annotation_text = f"MSE: {mse:.2e}\nMAE: {mae:.2e}"
-            plt.text(0.95, 0.95, annotation_text, horizontalalignment='right',
-                     verticalalignment='top', transform=plt.gca().transAxes,
-                     fontsize=10, bbox=dict(facecolor='white', alpha=0.5))
-
-        # Add step information to title if available
-        title = f'Predictions vs Actual Volumes ({tag.capitalize()})'
+        # Calculate and add metric annotations
+        mse = np.mean((preds - actuals) ** 2)
+        mae = np.mean(np.abs(preds - actuals))
+        annotation_text = f"MSE: {mse:.2e}\nMAE: {mae:.2e}"
+        plt.text(0.95, 0.05, annotation_text, horizontalalignment='right', 
+                verticalalignment='bottom', transform=plt.gca().transAxes, 
+                fontsize=10, bbox=dict(facecolor='white', alpha=0.8, 
+                                     boxstyle='round,pad=0.5'))
+        
+        # Create title
+        main_title = f'{model_type} - {task_type}'
+        subtitle = f'Predictions vs Actuals ({tag.capitalize()})'
         if step is not None:
-            title += f' - Step {step}'
-        plt.title(title)
+            subtitle += f' - Step {step}'
+            
+        plt.title(f'{main_title}\n{subtitle}', pad=15)
         plt.grid(True)
 
         # Ensure the metrics directory exists
