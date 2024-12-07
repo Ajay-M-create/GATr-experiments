@@ -4,4 +4,4 @@
 #bizon
 export BASEDIR="/home/ajay/GATr-experiments/tmp/gatr-experiments"
 echo $BASEDIR
-python ../scripts/symmetry_experiment.py base_dir="${BASEDIR}" seed=42 model=gatr_symmetry data.subsample=0.01 training.steps=5000 run_name=gatr_symmetry
+python ../scripts/symmetry_experiment.py base_dir="${BASEDIR}" seed=42 model=gatr_symmetry data.subsample=0.05 training.steps=10000 run_name=gatr_symmetry

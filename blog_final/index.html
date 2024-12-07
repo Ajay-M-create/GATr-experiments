@@ -506,40 +506,19 @@
 						<h1>Experiments</h1>
 						<h2>Experimental Setup</h2>
 						<p>
-						To test our hypothesis, we designed a series of geometric reasoning tasks with increasing complexity:
+						To test the hypothesis, a series of geometric reasoning tasks with increasing complexity were designed.
+						First, three datasets were created: 10000 instances each of 5-point convex hulls, 10-point convex hulls, and 20-point convex hulls.
+						The surface area, volume, and symmetry score of each shape was computed. Both the GATr and the standard transformer were trained to reason about the volume,
+						surface area, and symmetry score of a set of 3D shapes.
 						</p>
-
-						<ul>
-							<li><b>Task 1:</b> Simple geometric transformations (rotations, translations, scaling)</li>
-							<li><b>Task 2:</b> Compound geometric operations (sequences of transformations)</li>
-							<li><b>Task 3:</b> Complex spatial reasoning (intersection detection, distance calculations)</li>
-						</ul>
-
-						<h2>Implementation Details</h2>
-						<p>
-						We implemented both a standard transformer baseline and a GATr model with comparable architectures:
-						</p>
-
-						<ul>
-							<li><b>Model Architecture:</b> Both models use 6 transformer layers with 8 attention heads</li>
-							<li><b>Training:</b> Models were trained for 100 epochs using Adam optimizer</li>
-							<li><b>Dataset:</b> Synthetic dataset of 100,000 geometric reasoning problems</li>
-						</ul>
-
-						<h2>Evaluation Metrics</h2>
-						<p>
-						We evaluated performance using:
-						</p>
-
-						<ul>
-							<li>Mean Squared Error (MSE) for continuous predictions</li>
-							<li>Accuracy for discrete predictions</li>
-							<li>Inference time per operation</li>
-						</ul>
+						<img src="./images/convex_hulls_comparison.png" width=800px/>
 
 		    </div>
 		    <div class="margin-right-block">
-						The experimental setup was designed to systematically test geometric reasoning capabilities across different complexity levels.
+						Figure 2. A visualization of the 3D convex hulls used in the experiments.
+						The leftmost column shows the 5-point convex hulls, the middle column shows the 10-point convex hulls,
+						and the rightmost column shows the 20-point convex hulls. The volume, surface area, and symmetry score of each
+						shape is shown above each corresponding convex hull.
 		    </div>
 		</div>
 

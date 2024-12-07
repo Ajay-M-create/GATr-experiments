@@ -9,6 +9,6 @@ python ../scripts/surface_area_experiment.py \
     seed=42 \
     model=gatr_surface_area \
     data.data_dir="${BASEDIR}/data/surface_area_20" \
-    data.subsample=0.01 \
-    training.steps=5000 \
+    data.subsample=0.05 \
+    training.steps=10000 \
     run_name=gatr_surface_area_20 

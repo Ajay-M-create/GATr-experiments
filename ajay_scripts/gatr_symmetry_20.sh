@@ -9,6 +9,6 @@ python ../scripts/symmetry_experiment.py \
     seed=42 \
     model=gatr_symmetry \
     data.data_dir="${BASEDIR}/data/symmetry_20" \
-    data.subsample=0.01 \
+    data.subsample=0.1 \
     training.steps=5000 \
     run_name=gatr_symmetry_20 
