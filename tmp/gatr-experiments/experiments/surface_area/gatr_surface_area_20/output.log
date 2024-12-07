@@ -1,0 +1,42 @@
+[2024-12-06 23:57:40 I] Hoi.
+[2024-12-06 23:57:40 I] Set experiment surface_area with ID 2, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 23:57:40 I] Logger already initialized - hi again!
+[2024-12-06 23:57:40 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20
+[2024-12-06 23:57:40 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/config.yml
+[2024-12-06 23:57:41 I] Model has 10.58M learnable parameters
+[2024-12-06 23:57:41 I] Starting training
+[2024-12-06 23:57:41 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 23:57:42 I] Finished first forward pass with loss 7.879053592681885
+[2024-12-07 00:00:43 I] Starting validation at step 1000
+[2024-12-07 00:00:47 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 00:00:48 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-07 00:03:56 I] Starting validation at step 2000
+[2024-12-07 00:04:01 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 00:04:01 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-07 00:07:15 I] Starting validation at step 3000
+[2024-12-07 00:07:20 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 00:07:20 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-07 00:10:34 I] Starting validation at step 4000
+[2024-12-07 00:10:38 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 00:10:38 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-07 00:13:46 I] Starting validation at step 5000
+[2024-12-07 00:13:50 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 00:13:51 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 00:13:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 00:13:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 00:13:55 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/models/model_final.pt
+[2024-12-07 00:13:59 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_test.png
+[2024-12-07 00:13:59 I] Ran evaluation on dataset test:
+[2024-12-07 00:13:59 I]     loss = 1.1838893360137939
+[2024-12-07 00:14:00 I]     mse = 0.19641938931941996
+[2024-12-07 00:14:00 I]     rmse = 1.0879339792874017
+[2024-12-07 00:14:00 I]     output_reg = 98.74699694824223
+[2024-12-07 00:14:00 I]     mae = 0.43903248538970974
+[2024-12-07 00:14:05 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/gatr_surface_area_20/metrics/predictions_vs_actuals_generalization.png
+[2024-12-07 00:14:05 I] Ran evaluation on dataset generalization:
+[2024-12-07 00:14:05 I]     loss = 3.2969744796752942
+[2024-12-07 00:14:05 I]     mse = 0.8232689765930175
+[2024-12-07 00:14:05 I]     rmse = 1.8156649207698208
+[2024-12-07 00:14:05 I]     output_reg = 247.37055632324214
+[2024-12-07 00:14:05 I]     mae = 0.9043062459945678
+[2024-12-07 00:14:05 I] Anders nog iets?

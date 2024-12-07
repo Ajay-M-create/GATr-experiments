@@ -13,8 +13,7 @@ checkpoint: null
 
 data:
   data_dir: '${base_dir}/data/surface_area'
-  data_dir_20: '${base_dir}/data/surface_area_20'
-  data_dir_80: '${base_dir}/data/surface_area_80'
+  num_points: 5
   subsample: null
 
   mv_channels_in: 1

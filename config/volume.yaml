@@ -13,8 +13,7 @@ checkpoint: null
 
 data:
   data_dir: '${base_dir}/data/volume'
-  data_dir_20: '${base_dir}/data/volume_20'
-  data_dir_80: '${base_dir}/data/volume_80'
+  num_points: 5
   subsample: null
 
   mv_channels_in: 1

@@ -54,7 +54,7 @@ def generate_surface_area_dataset(filename, num_samples, num_points=5):
     np.savez(filename, points=points, surface_areas=surface_areas)
 
 
-def generate_datasets(path):
+def generate_datasets(path: Path, num_points: int):
     """Generates train, validation, test, and generalization datasets.
 
     Parameters
@@ -68,16 +68,16 @@ def generate_datasets(path):
     print(f"Creating surface area datasets in {str(path)}")
 
     # Training dataset
-    generate_surface_area_dataset(path / "train.npz", num_samples=100000, num_points=5)
+    generate_surface_area_dataset(path / "train.npz", num_samples=100000, num_points=num_points)
 
     # Validation dataset
-    generate_surface_area_dataset(path / "val.npz", num_samples=5000, num_points=5)
+    generate_surface_area_dataset(path / "val.npz", num_samples=5000, num_points=num_points)
 
     # Test dataset
-    generate_surface_area_dataset(path / "test.npz", num_samples=5000, num_points=5)
+    generate_surface_area_dataset(path / "test.npz", num_samples=5000, num_points=num_points)
 
     # Generalization dataset (e.g., with more points)
-    generate_surface_area_dataset(path / "generalization.npz", num_samples=5000, num_points=10)
+    generate_surface_area_dataset(path / "generalization.npz", num_samples=5000, num_points=num_points * 2)
 
     print("Dataset generation complete!")
 
@@ -85,9 +85,13 @@ def generate_datasets(path):
 @hydra.main(config_path="../config", config_name="surface_area", version_base=None)
 def main(cfg):
     """Entry point for surface area dataset generation."""
-    data_dir = cfg.data.data_dir
+    base_data_dir = Path(cfg.data.data_dir)
+    num_points = cfg.data.num_points
+    
+    # Append point count to the directory name
+    data_dir = base_data_dir.parent / f"{base_data_dir.name}_{num_points}"
     np.random.seed(cfg.seed)
-    generate_datasets(data_dir)
+    generate_datasets(data_dir, num_points)
 
 
 if __name__ == "__main__":

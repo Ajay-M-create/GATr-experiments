@@ -1,0 +1,51 @@
+[2024-12-06 23:55:08 I] Hoi.
+[2024-12-06 23:55:08 I] Set experiment surface_area with ID 2, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-06 23:55:08 I] Logger already initialized - hi again!
+[2024-12-06 23:55:08 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20
+[2024-12-06 23:55:08 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/config.yml
+[2024-12-06 23:55:09 I] Model has 1.58M learnable parameters
+[2024-12-06 23:55:09 I] Starting training
+[2024-12-06 23:55:09 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-06 23:55:09 I] Finished first forward pass with loss 5.774354457855225
+[2024-12-06 23:55:30 I] Starting validation at step 1000
+[2024-12-06 23:55:31 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-06 23:55:31 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-06 23:55:50 I] Starting validation at step 2000
+[2024-12-06 23:55:51 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-06 23:55:52 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-06 23:56:13 I] Starting validation at step 3000
+[2024-12-06 23:56:13 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-06 23:56:14 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-06 23:56:33 I] Starting validation at step 4000
+[2024-12-06 23:56:33 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-06 23:56:34 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-06 23:56:54 I] Starting validation at step 5000
+[2024-12-06 23:56:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-06 23:56:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 23:56:56 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val.png
+[2024-12-06 23:56:56 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-06 23:56:56 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/models/model_final.pt
+[2024-12-06 23:56:57 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_test.png
+[2024-12-06 23:56:57 I] Ran evaluation on dataset test:
+[2024-12-06 23:56:57 I]     loss = 0.0014925719199702146
+[2024-12-06 23:56:57 I]     mse = 0.0014925719199702146
+[2024-12-06 23:56:57 I]     rmse = 0.038401253402359135
+[2024-12-06 23:56:57 I]     output_reg = 0.0
+[2024-12-06 23:56:57 I]     mae = 0.03015297865867615
+[2024-12-06 23:56:58 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/metrics/predictions_vs_actuals_generalization.png
+[2024-12-06 23:56:58 I] Ran evaluation on dataset generalization:
+[2024-12-06 23:56:58 I]     loss = 0.14041861839294434
+[2024-12-06 23:56:58 I]     mse = 0.14041861839294434
+[2024-12-06 23:56:58 I]     rmse = 0.37467852437652815
+[2024-12-06 23:56:58 I]     output_reg = 0.0
+[2024-12-06 23:56:58 I]     mae = 0.37165397567749026
+[2024-12-06 23:56:58 I] Anders nog iets?
+[2024-12-07 00:18:18 I] Hoi.
+[2024-12-07 00:18:19 I] Set experiment surface_area with ID 2, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 00:18:19 I] Logger already initialized - hi again!
+[2024-12-07 00:18:19 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20
+[2024-12-07 00:18:19 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/surface_area/transformer_surface_area_20/config.yml
+[2024-12-07 00:18:19 I] Model has 1.58M learnable parameters
+[2024-12-07 00:18:19 I] Starting training
+[2024-12-07 00:18:19 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-07 00:18:20 I] Finished first forward pass with loss 5.774354457855225

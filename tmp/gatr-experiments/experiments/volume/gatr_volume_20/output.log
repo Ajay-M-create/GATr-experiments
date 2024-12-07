@@ -40,3 +40,24 @@
 [2024-12-06 22:48:30 I]     output_reg = 1.4857504463195796
 [2024-12-06 22:48:30 I]     mae = 0.053419373941421516
 [2024-12-06 22:48:30 I] Anders nog iets?
+[2024-12-07 00:54:20 I] Hoi.
+[2024-12-07 00:54:20 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 00:54:20 I] Logger already initialized - hi again!
+[2024-12-07 00:54:20 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20
+[2024-12-07 00:54:21 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20/config.yml
+[2024-12-07 00:54:21 I] Model has 42.27M learnable parameters
+[2024-12-07 00:54:21 I] Starting training
+[2024-12-07 00:54:21 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-07 00:54:22 I] Finished first forward pass with loss 1.8875536918640137
+[2024-12-07 00:59:48 I] Starting validation at step 1000
+[2024-12-07 00:59:54 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 00:59:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-07 01:00:13 I] Hoi.
+[2024-12-07 01:00:13 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 01:00:13 I] Logger already initialized - hi again!
+[2024-12-07 01:00:13 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20
+[2024-12-07 01:00:14 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20/config.yml
+[2024-12-07 01:00:14 I] Model has 10.58M learnable parameters
+[2024-12-07 01:00:14 I] Starting training
+[2024-12-07 01:00:14 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
+[2024-12-07 01:00:15 I] Finished first forward pass with loss 1.0054504871368408

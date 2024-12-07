@@ -17,6 +17,7 @@ debug: false
 checkpoint: null
 data:
   data_dir: ${base_dir}/data/symmetry
+  num_points: 5
   subsample: 0.01
   mv_channels_in: 1
   mv_channels_out: 1

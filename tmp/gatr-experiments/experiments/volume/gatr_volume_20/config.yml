@@ -43,7 +43,7 @@ debug: false
 checkpoint: null
 data:
   data_dir: /home/ajay/GATr-experiments/tmp/gatr-experiments/data/volume_20
-  data_dir_20: ${base_dir}/data/volume_20
+  num_points: 5
   subsample: 0.01
   mv_channels_in: 1
   mv_channels_out: 1

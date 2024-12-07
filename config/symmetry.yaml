@@ -13,6 +13,7 @@ checkpoint: null
 
 data:
   data_dir: '${base_dir}/data/symmetry'
+  num_points: 5
   subsample: null
 
   mv_channels_in: 1
@@ -25,6 +26,8 @@ data:
   geobaseline_vec_channels_out: 1
   geobaseline_s_channels_in: 1
   geobaseline_s_channels_out: 0
+
+  
 
 training:
   output_regularization: 0.01
