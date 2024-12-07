@@ -85,3 +85,141 @@
 [2024-12-07 01:23:07 I]     output_reg = 1.1781216617584231
 [2024-12-07 01:23:07 I]     mae = 0.08781085015535357
 [2024-12-07 01:23:07 I] Anders nog iets?
+[2024-12-07 08:03:56 I] Hoi.
+[2024-12-07 08:03:57 I] Set experiment symmetry with ID 3, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 08:03:57 I] Logger already initialized - hi again!
+[2024-12-07 08:03:57 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20
+[2024-12-07 08:03:57 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/config.yml
+[2024-12-07 08:03:57 I] Model has 10.58M learnable parameters
+[2024-12-07 08:03:57 I] Starting training
+[2024-12-07 08:03:57 I] Training for 5000 steps, that is, 32 epochs on a dataset of size 10000 with batchsize 64
+[2024-12-07 08:03:58 I] Finished first forward pass with loss 0.9480207562446594
+[2024-12-07 08:06:44 I] Starting validation at step 1000
+[2024-12-07 08:06:48 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 08:06:49 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-07 08:09:35 I] Starting validation at step 2000
+[2024-12-07 08:09:39 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 08:09:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-07 08:12:24 I] Starting validation at step 3000
+[2024-12-07 08:12:28 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 08:12:28 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-07 08:15:16 I] Starting validation at step 4000
+[2024-12-07 08:15:21 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 08:15:21 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-07 08:18:04 I] Starting validation at step 5000
+[2024-12-07 08:18:08 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 08:18:08 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 08:18:12 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 08:18:12 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 08:18:12 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/models/model_final.pt
+[2024-12-07 08:18:17 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_generalization.png
+[2024-12-07 08:18:17 I] Ran evaluation on dataset generalization:
+[2024-12-07 08:18:17 I]     loss = 0.02172008226513863
+[2024-12-07 08:18:17 I]     mse = 0.010338874372839923
+[2024-12-07 08:18:17 I]     rmse = 0.1473201966913774
+[2024-12-07 08:18:17 I]     output_reg = 1.1381208164215086
+[2024-12-07 08:18:17 I]     mae = 0.09069013440608978
+[2024-12-07 08:18:21 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_test.png
+[2024-12-07 08:18:21 I] Ran evaluation on dataset test:
+[2024-12-07 08:18:21 I]     loss = 0.009126637035608292
+[2024-12-07 08:18:21 I]     mse = 0.0034361909478902827
+[2024-12-07 08:18:21 I]     rmse = 0.09546146929742333
+[2024-12-07 08:18:21 I]     output_reg = 0.5690446256637574
+[2024-12-07 08:18:21 I]     mae = 0.0460310859322548
+[2024-12-07 08:18:21 I] Anders nog iets?
+[2024-12-07 15:00:40 I] Hoi.
+[2024-12-07 15:00:41 I] Set experiment symmetry with ID 3, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 15:00:41 I] Logger already initialized - hi again!
+[2024-12-07 15:00:41 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20
+[2024-12-07 15:00:41 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/config.yml
+[2024-12-07 15:00:41 I] Model has 10.58M learnable parameters
+[2024-12-07 15:00:41 I] Starting training
+[2024-12-07 15:00:42 I] Training for 10000 steps, that is, 127 epochs on a dataset of size 5000 with batchsize 64
+[2024-12-07 15:00:42 I] Finished first forward pass with loss 0.9489353895187378
+[2024-12-07 15:03:31 I] Starting validation at step 1000
+[2024-12-07 15:03:35 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:03:35 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-07 15:06:25 I] Starting validation at step 2000
+[2024-12-07 15:06:29 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:06:30 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-07 15:09:14 I] Starting validation at step 3000
+[2024-12-07 15:09:19 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:09:19 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-07 15:12:51 I] Starting validation at step 4000
+[2024-12-07 15:12:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:12:55 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-07 15:15:45 I] Starting validation at step 5000
+[2024-12-07 15:15:49 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:15:49 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 15:18:31 I] Starting validation at step 6000
+[2024-12-07 15:18:35 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:18:35 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_6000.png
+[2024-12-07 15:21:27 I] Starting validation at step 7000
+[2024-12-07 15:21:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:21:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_7000.png
+[2024-12-07 15:26:56 I] Starting validation at step 8000
+[2024-12-07 15:27:00 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:27:00 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_8000.png
+[2024-12-07 15:31:21 I] Starting validation at step 9000
+[2024-12-07 15:31:26 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:31:26 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_9000.png
+[2024-12-07 15:34:13 I] Starting validation at step 10000
+[2024-12-07 15:34:17 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:34:17 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_10000.png
+[2024-12-07 15:34:21 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:34:22 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_10000.png
+[2024-12-07 15:34:22 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/models/model_final.pt
+[2024-12-07 15:34:27 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_generalization.png
+[2024-12-07 15:34:27 I] Ran evaluation on dataset generalization:
+[2024-12-07 15:34:27 I]     loss = 0.02194226722717285
+[2024-12-07 15:34:27 I]     mse = 0.011182344937324522
+[2024-12-07 15:34:27 I]     rmse = 0.14806815599555137
+[2024-12-07 15:34:27 I]     output_reg = 1.0759922515869143
+[2024-12-07 15:34:27 I]     mae = 0.09506771847009655
+[2024-12-07 15:34:32 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_test.png
+[2024-12-07 15:34:32 I] Ran evaluation on dataset test:
+[2024-12-07 15:34:32 I]     loss = 0.009139421018958094
+[2024-12-07 15:34:32 I]     mse = 0.003754817236959934
+[2024-12-07 15:34:32 I]     rmse = 0.09551919970703313
+[2024-12-07 15:34:32 I]     output_reg = 0.5384603843688968
+[2024-12-07 15:34:32 I]     mae = 0.048390037548542035
+[2024-12-07 15:34:32 I] Anders nog iets?
+[2024-12-07 15:40:25 I] Hoi.
+[2024-12-07 15:40:26 I] Set experiment symmetry with ID 3, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 15:40:26 I] Logger already initialized - hi again!
+[2024-12-07 15:40:26 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20
+[2024-12-07 15:40:26 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/config.yml
+[2024-12-07 15:40:26 I] Model has 10.58M learnable parameters
+[2024-12-07 15:40:26 I] Starting training
+[2024-12-07 15:40:27 I] Training for 10000 steps, that is, 127 epochs on a dataset of size 5000 with batchsize 64
+[2024-12-07 15:40:27 I] Finished first forward pass with loss 0.9489353895187378
+[2024-12-07 15:44:51 I] Starting validation at step 1000
+[2024-12-07 15:44:56 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:44:56 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-07 15:48:00 I] Starting validation at step 2000
+[2024-12-07 15:48:04 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:48:05 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-07 15:54:21 I] Starting validation at step 3000
+[2024-12-07 15:54:44 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 15:54:44 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-07 16:02:51 I] Starting validation at step 4000
+[2024-12-07 16:03:14 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 16:03:14 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-07 16:07:35 I] Starting validation at step 5000
+[2024-12-07 16:07:39 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 16:07:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 16:12:52 I] Starting validation at step 6000
+[2024-12-07 16:13:15 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 16:13:16 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_6000.png
+[2024-12-07 16:20:49 I] Starting validation at step 7000
+[2024-12-07 16:21:12 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 16:21:12 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_7000.png
+[2024-12-07 16:26:49 I] Hoi.
+[2024-12-07 16:26:50 I] Set experiment symmetry with ID 3, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 16:26:50 I] Logger already initialized - hi again!
+[2024-12-07 16:26:50 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20
+[2024-12-07 16:26:50 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/config.yml
+[2024-12-07 16:26:51 I] Model has 10.58M learnable parameters
+[2024-12-07 16:26:51 I] Starting training
+[2024-12-07 16:26:51 I] Training for 10000 steps, that is, 127 epochs on a dataset of size 5000 with batchsize 64
+[2024-12-07 16:26:54 I] Finished first forward pass with loss 0.9489353895187378

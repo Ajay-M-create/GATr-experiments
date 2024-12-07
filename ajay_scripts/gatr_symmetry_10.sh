@@ -10,5 +10,5 @@ python ../scripts/symmetry_experiment.py \
     model=gatr_symmetry \
     data.data_dir="${BASEDIR}/data/symmetry_10" \
     data.subsample=0.05 \
-    training.steps=5000 \
+    training.steps=10000 \
     run_name=gatr_symmetry_10

@@ -1,0 +1,13 @@
+
+./transformer_volume.sh 1
+./transformer_volume_10.sh 1
+./transformer_volume_20.sh 1
+./transformer_surface_area.sh 1
+./transformer_surface_area_10.sh 1
+./transformer_surface_area_20.sh 1
+./transformer_symmetry.sh 1
+./transformer_symmetry_10.sh 1
+./transformer_symmetry_20.sh 1
+
+
+echo "All experiments completed!"

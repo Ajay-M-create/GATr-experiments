@@ -176,3 +176,60 @@
 [2024-12-06 20:47:02 I] Starting training
 [2024-12-06 20:47:02 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
 [2024-12-06 20:47:03 I] Finished first forward pass with loss 0.10076620429754257
+[2024-12-07 03:55:43 I] Hoi.
+[2024-12-07 03:55:43 I] Set experiment volume with ID 1, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 03:55:43 I] Logger already initialized - hi again!
+[2024-12-07 03:55:43 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume
+[2024-12-07 03:55:43 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/config.yml
+[2024-12-07 03:55:44 I] Model has 1.58M learnable parameters
+[2024-12-07 03:55:44 I] Starting training
+[2024-12-07 03:55:44 I] Training for 10000 steps, that is, 127 epochs on a dataset of size 5000 with batchsize 64
+[2024-12-07 03:55:44 I] Finished first forward pass with loss 0.09638671576976776
+[2024-12-07 03:56:01 I] Starting validation at step 1000
+[2024-12-07 03:56:02 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:56:02 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_1000.png
+[2024-12-07 03:56:19 I] Starting validation at step 2000
+[2024-12-07 03:56:20 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:56:20 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_2000.png
+[2024-12-07 03:56:37 I] Starting validation at step 3000
+[2024-12-07 03:56:37 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:56:38 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_3000.png
+[2024-12-07 03:56:55 I] Starting validation at step 4000
+[2024-12-07 03:56:56 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:56:56 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_4000.png
+[2024-12-07 03:57:14 I] Starting validation at step 5000
+[2024-12-07 03:57:15 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:57:15 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 03:57:31 I] Starting validation at step 6000
+[2024-12-07 03:57:32 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:57:32 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_6000.png
+[2024-12-07 03:57:49 I] Starting validation at step 7000
+[2024-12-07 03:57:50 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:57:50 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_7000.png
+[2024-12-07 03:58:05 I] Starting validation at step 8000
+[2024-12-07 03:58:06 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:58:06 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_8000.png
+[2024-12-07 03:58:23 I] Starting validation at step 9000
+[2024-12-07 03:58:24 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:58:24 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_9000.png
+[2024-12-07 03:58:43 I] Starting validation at step 10000
+[2024-12-07 03:58:44 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:58:44 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_10000.png
+[2024-12-07 03:58:45 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val.png
+[2024-12-07 03:58:45 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_val_step_10000.png
+[2024-12-07 03:58:45 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/models/model_final.pt
+[2024-12-07 03:58:46 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_generalization.png
+[2024-12-07 03:58:46 I] Ran evaluation on dataset generalization:
+[2024-12-07 03:58:46 I]     loss = 0.0075161419734358775
+[2024-12-07 03:58:46 I]     mse = 0.0075161419734358775
+[2024-12-07 03:58:46 I]     rmse = 0.0866144315748721
+[2024-12-07 03:58:46 I]     output_reg = 0.0
+[2024-12-07 03:58:46 I]     mae = 0.08167629386186603
+[2024-12-07 03:58:46 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/transformer_volume/metrics/predictions_vs_actuals_test.png
+[2024-12-07 03:58:46 I] Ran evaluation on dataset test:
+[2024-12-07 03:58:46 I]     loss = 2.0001016215974232e-05
+[2024-12-07 03:58:46 I]     mse = 2.0001016215974232e-05
+[2024-12-07 03:58:46 I]     rmse = 0.004434775552966442
+[2024-12-07 03:58:46 I]     output_reg = 0.0
+[2024-12-07 03:58:46 I]     mae = 0.003345801519602538
+[2024-12-07 03:58:46 I] Anders nog iets?
