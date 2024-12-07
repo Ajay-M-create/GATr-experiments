@@ -564,10 +564,7 @@
 
 		    </div>
 		    <div class="margin-right-block">
-						Figure 2. A visualization of the 3D convex hulls used in the experiments.
-						The leftmost column shows the 5-point convex hulls, the middle column shows the 10-point convex hulls,
-						and the rightmost column shows the 20-point convex hulls. The volume, surface area, and symmetry score of each
-						shape is shown above each corresponding convex hull.
+
 		    </div>
 		</div>
 
@@ -580,63 +577,59 @@
 						<h1>Results</h1>
 
 						Here, the major qualitative and quantitative results are summarized.
-						<br><br>
+						Below are the accuracy plots for the validation set at steps 1000, 5000, and 10000,
+						and the test set at the end of training across all tasks and hull sizes.
 
-						<h2>Accuracy plots</h2>
-						<p>
-						Below are the accuracy plots for the validation set and the test set across all tasks and hull sizes.
-						</p>
+						The animations below show the evolution of the training process over three different steps for both the GATr and the standard transformer.
+						The n_points variable represents the number of points in the convex hull used to train the model.
 
-						<ul>
-							<li><b>Simple Tasks:</b> Both models performed similarly on basic geometric transformations</li>
-							<li><b>Compound Tasks:</b> GATr showed 15% better accuracy on compound operations</li>
-							<li><b>Complex Tasks:</b> GATr demonstrated 25% improvement in complex spatial reasoning</li>
-						</ul>
+						Full results for every timestep can be found in the Github repository under:
+						<pre style="margin-left: auto; margin-right: auto; width: fit-content;">gatr-experiments/
+└── experiments/
+    └── {task_name}/        # e.g. volume, surface_area, symmetry
+        └── {model_run}/    # e.g. gatr_volume_10, transformer_volume_20
+            └── metrics/</pre>
 
-						<h2>Efficiency Analysis</h2>
-						<p>
-						We also analyzed computational efficiency:
-						</p>
 
-						<ul>
-							<li>GATr required 20% fewer parameters for equivalent performance</li>
-							<li>Inference time was comparable between both models</li>
-							<li>GATr showed better scaling with problem complexity</li>
-						</ul>
+						<center>
+							<video class='transformer-video' loop autoplay muted style="width: 800px">
+								<source src="./images/Transformer_acc.mp4" type="video/mp4">
+							</video>
 
-						<h2>Key Observations</h2>
-						<p>
-						The results support our hypothesis that GATr's geometric algebra framework provides advantages for complex geometric reasoning tasks. The performance gap between GATr and the baseline transformer widened as task complexity increased.
-						</p>
+							<br><br>
+
+							<video class='GATr-video' loop autoplay muted style="width: 800px">
+								<source src="./images/GATr_acc.mp4" type="video/mp4">
+							</video>
+						</center>
+
 
 		    </div>
 		    <div class="margin-right-block">
-				Full results can be found in the Github repository under /tmp/gatr-experiments/experiments/"task_name"/"model_run_name"/metrics
-				where "task_name" is the name of the task (e.g. volume, surface_area, symmetry) and "model_run_name" is the name of the model run (e.g. gatr_volume_10, transformer_volume_20, etc.).
-		    </div>
+				Figures 3 and 4. Evolution of accuracy for both the GATr and the Standard Transformer.
+				The n_points variable represents the number of points in the convex hull used to train the model. The MSE and MAE losses are shown in the bottom left box of each plot.
+			</div>
 		</div>
 
-		<div class="content-margin-container">
-				<div class="margin-left-block">
-				</div>
-		    <div class="main-content-block">
-            <h1>Another section</h1>
-            In this section we embed a video:
-						<video class='my-video' loop autoplay muted style="width: 725px">
-								<source src="./images/mtsh.mp4" type="video/mp4">
-						</video>
-		    </div>
-		    <div class="margin-right-block">
-					A caption for the video could go here.
-		    </div>
-		</div>
 
 		<div class="content-margin-container" id="implications_and_limitations">
 				<div class="margin-left-block">
 				</div>
 		    <div class="main-content-block">
 						<h1>Implications and limitations</h1>
-						Let's end with some discussion of the implications and limitations.
+						Contrary to our hypothesis, it appears that the standard transformer performed better than the GATr on all tasks.
+						While the GATr was able to learn to predict the volume, surface area, and symmetry score of the convex hulls to some capacity, it did not outperform the standard transformer.
+						This was especially true for the symmetry score for the 20-point convex hulls, where the GATr couldn't learn to predict the symmetry score at all whereas there was some learning attempt for the standard transformer.
+
+						This was surprising given that the GATr had more available parameters and was able to learn the different tasks to some capacity.
+						However, it is possible that the standard transformer is just better at learning these particular tasks.
+
+						These tasks were much simpler than the Nbody and arterial mesh tasks that the GATr was able to learn in the original paper, so it may be possible to see the GATr outperform the standard transformer on tasks with higher order difficulty.
+
+						<p>One possible explanation for this is that embedding the convex point hulls as point multivectors was not the best way to represent the data.
+						While the GATr was able to learn to represent the geometric operations through its embedding space, it may not be taking full advantage of this extra representational power.
+						On the other hand, the standard transformer may be more effective at leveraging its linear operations to learn the different tasks.
+						</p>
 		    </div>
 		    <div class="margin-right-block">
 		    </div>
