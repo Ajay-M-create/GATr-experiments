@@ -238,3 +238,36 @@
 [2024-12-07 16:52:06 I] Starting validation at step 5000
 [2024-12-07 16:52:10 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
 [2024-12-07 16:52:11 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_5000.png
+[2024-12-07 16:55:11 I] Starting validation at step 6000
+[2024-12-07 16:55:15 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 16:55:16 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_6000.png
+[2024-12-07 16:58:22 I] Starting validation at step 7000
+[2024-12-07 16:58:26 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 16:58:26 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_7000.png
+[2024-12-07 17:01:36 I] Starting validation at step 8000
+[2024-12-07 17:01:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 17:01:40 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_8000.png
+[2024-12-07 17:04:40 I] Starting validation at step 9000
+[2024-12-07 17:04:45 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 17:04:45 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_9000.png
+[2024-12-07 17:11:10 I] Starting validation at step 10000
+[2024-12-07 17:11:14 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 17:11:15 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_10000.png
+[2024-12-07 17:11:19 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 17:11:20 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_val_step_10000.png
+[2024-12-07 17:11:20 I] Saving model at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/models/model_final.pt
+[2024-12-07 17:11:27 I] Saved predictions vs actuals plot for 'generalization' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_generalization.png
+[2024-12-07 17:11:27 I] Ran evaluation on dataset generalization:
+[2024-12-07 17:11:27 I]     loss = 0.022107042831182467
+[2024-12-07 17:11:27 I]     mse = 0.011721552091836934
+[2024-12-07 17:11:27 I]     rmse = 0.148620919246454
+[2024-12-07 17:11:27 I]     output_reg = 1.038549084854126
+[2024-12-07 17:11:27 I]     mae = 0.0977714793086052
+[2024-12-07 17:11:45 I] Saved predictions vs actuals plot for 'test' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry_20/metrics/predictions_vs_actuals_test.png
+[2024-12-07 17:11:45 I] Ran evaluation on dataset test:
+[2024-12-07 17:11:45 I]     loss = 0.00917920921444893
+[2024-12-07 17:11:45 I]     mse = 0.003986606498062611
+[2024-12-07 17:11:45 I]     rmse = 0.09572106394432618
+[2024-12-07 17:11:45 I]     output_reg = 0.5192602852821351
+[2024-12-07 17:11:45 I]     mae = 0.05010083184242249
+[2024-12-07 17:11:45 I] Anders nog iets?

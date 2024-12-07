@@ -36,7 +36,7 @@ training:
   batchsize: 64
   eval_batchsize: 64
 
-  lr: 5e-5
+  lr: 3e-4
   lr_decay: 0.01
   clip_grad_norm: 10.0
   weight_decay: 0.0

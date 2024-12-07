@@ -159,3 +159,12 @@
 [2024-12-07 07:35:28 I]     output_reg = 0.049941978687047965
 [2024-12-07 07:35:28 I]     mae = 0.013386289715766905
 [2024-12-07 07:35:28 I] Anders nog iets?
+[2024-12-07 17:19:39 I] Hoi.
+[2024-12-07 17:19:39 I] Set experiment symmetry with ID 3, artifact location file:/home/ajay/GATr-experiments/tmp/gatr-experiments/tracking/artifacts
+[2024-12-07 17:19:39 I] Logger already initialized - hi again!
+[2024-12-07 17:19:39 I] Running experiment at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry
+[2024-12-07 17:19:39 I] Saving config at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/symmetry/gatr_symmetry/config.yml
+[2024-12-07 17:19:40 I] Model has 10.58M learnable parameters
+[2024-12-07 17:19:40 I] Starting training
+[2024-12-07 17:19:40 I] Training for 10000 steps, that is, 127 epochs on a dataset of size 5000 with batchsize 64
+[2024-12-07 17:19:40 I] Finished first forward pass with loss 0.23521332442760468
