@@ -604,6 +604,7 @@
 						</center>
 
 
+
 		    </div>
 		    <div class="margin-right-block">
 				Figures 3 and 4. Evolution of accuracy for both the GATr and the Standard Transformer.
@@ -611,6 +612,98 @@
 			</div>
 		</div>
 
+		<div class="content-margin-container" id="results-table">
+			<div class="margin-left-block">
+			</div>
+			<div class="main-content-block" style="display: flex; justify-content: center;">
+			<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; text-align: center; margin-right: 20px; font-size: 14px;">
+				<thead>
+					<tr>
+						<th></th>
+						<th colspan="2">Vol (5)</th>
+						<th colspan="2">Vol (10)</th>
+						<th colspan="2">Vol (20)</th>
+						<th colspan="2">SA (5)</th>
+						<th colspan="2">SA (10)</th>
+						<th colspan="2">SA (20)</th>
+						<th colspan="2">Sym (5)</th>
+						<th colspan="2">Sym (10)</th>
+						<th colspan="2">Sym (20)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Model</b></td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+						<td>GATr</td>
+						<td>Tr</td>
+					</tr>
+					<tr>
+						<td><b>MSE</b></td>
+						<td>7.44e-5</td>
+						<td style="background-color: #e6ffe6">2.00e-5</td>
+						<td>4.43e-4</td>
+						<td style="background-color: #e6ffe6">5.42e-5</td>
+						<td>2.91e-3</td>
+						<td style="background-color: #e6ffe6">8.28e-5</td>
+						<td>1.99e-3</td>
+						<td style="background-color: #e6ffe6">1.99e-4</td>
+						<td>2.77e-2</td>
+						<td style="background-color: #e6ffe6">3.57e-4</td>
+						<td>1.91e-1</td>
+						<td style="background-color: #e6ffe6">4.50e-4</td>
+						<td>4.08e-4</td>
+						<td style="background-color: #e6ffe6">5.42e-4</td>
+						<td>1.05e-3</td>
+						<td style="background-color: #e6ffe6">1.03e-3</td>
+						<td>3.99e-3</td>
+						<td style="background-color: #e6ffe6">1.47e-3</td>
+					</tr>
+					<tr>
+						<td><b>MAE</b></td>
+						<td>6.09e-3</td>
+						<td style="background-color: #e6ffe6">3.35e-3</td>
+						<td>1.83e-2</td>
+						<td style="background-color: #e6ffe6">5.74e-3</td>
+						<td>5.23e-2</td>
+						<td style="background-color: #e6ffe6">7.21e-3</td>
+						<td>4.08e-2</td>
+						<td style="background-color: #e6ffe6">1.08e-2</td>
+						<td>1.62e-1</td>
+						<td style="background-color: #e6ffe6">1.49e-2</td>
+						<td>4.33e-1</td>
+						<td style="background-color: #e6ffe6">1.69e-2</td>
+						<td>1.34e-2</td>
+						<td style="background-color: #e6ffe6">1.58e-2</td>
+						<td>2.48e-2</td>
+						<td style="background-color: #e6ffe6">2.47e-2</td>
+						<td>5.01e-2</td>
+						<td style="background-color: #e6ffe6">3.04e-2</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+
+			<div class="table-caption" style="flex: 1; padding-left: 20px; font-size: 14px;">
+				<strong>Table 2:</strong> Comparison of Mean Squared Error (MSE) and Mean Absolute Error (MAE) between GATr and standard Transformer models across different tasks and point cloud sizes. Cells highlighted in light green indicate the better performing model for each metric and configuration.
+				The results show that the standard Transformer had lower MSE and MAE for all tasks, and this discrepancy increased with number of points.
+			</div>
+		</div>
 
 		<div class="content-margin-container" id="implications_and_limitations">
 				<div class="margin-left-block">
@@ -619,32 +712,40 @@
 						<h1>Implications and limitations</h1>
 						Contrary to our hypothesis, it appears that the standard transformer performed better than the GATr on all tasks.
 						While the GATr was able to learn to predict the volume, surface area, and symmetry score of the convex hulls to some capacity, it did not outperform the standard transformer.
-						This was especially true for the symmetry score for the 20-point convex hulls, where the GATr couldn't learn to predict the symmetry score at all whereas there was some learning attempt for the standard transformer.
 
-						This was surprising given that the GATr had more available parameters and was able to learn the different tasks to some capacity.
+						<h2>Analysis of Numerical Results</h2>
+						Looking at the numerical results in Table 2:
+
+						<ul>
+							<li><b>Volume Prediction:</b> For 5-point hulls, both models performed well, with MSEs of 7.44e-5 (GATr) vs 2.00e-5 (Transformer). However, as complexity increased to 20 points, the GATr's error grew significantly (MSE: 2.91e-3) while the Transformer maintained good performance (MSE: 8.28e-5).</li>
+
+							<li><b>Surface Area:</b> The performance gap was even greater for surface area calculations. With 20-point hulls, the GATr's MSE (1.91e-1) was several orders of magnitude higher than the Transformer's (4.50e-4), suggesting this task was particularly difficult for the Geometric Algebra Transformer.</li>
+
+							<li><b>Symmetry Score:</b> Both models struggled with symmetry predictions, but the Transformer consistently maintained slightly better performance. For 20-point hulls, the GATr's MSE (3.99e-3) was nearly triple the Transformer's (1.47e-3), but was roughly the same for 5-point and 10-point hulls.</li>
+						</ul>
+
+						This was especially surprising given that the GATr had more available parameters and was able to learn the different tasks to some capacity.
 						However, it is possible that the standard transformer is just better at learning these particular tasks.
 
 						These tasks were much simpler than the Nbody and arterial mesh tasks that the GATr was able to learn in the original paper, so it may be possible to see the GATr outperform the standard transformer on tasks with higher order difficulty.
 
 						<p>One possible explanation for this is that embedding the convex point hulls as point multivectors was not the best way to represent the data.
 						While the GATr was able to learn to represent the geometric operations through its embedding space, it may not be taking full advantage of this extra representational power.
-						On the other hand, the standard transformer may be more effective at leveraging its linear operations to learn the different tasks.
+						On the other hand, the standard transformer may be more effective at leveraging its linear operations to learn these specific geometric properties.
+						The consistent pattern of increasing error with point cloud size suggests that the GATr's multivector representation might introduce additional complexity that makes it harder to scale to larger point sets, at least for these particular geometric calculations.
 						</p>
+
+
+						<h2>Future Work</h2>
+						<p>This preliminary study suggests that GATrs may not be the best choice for a transformer within a morphometric diffusion model, at least for these particular tasks. However, they still may be useful in tasks similar to the Nbody and arterial mesh tasks.
+						Therefore, the next step would be to explore how the multivectors evolve over the course of training to see if the GATr is making use of the extra representational power of the multivectors.
+						Next, it would be interersting to implement the GATr in a morphometric diffusion model and visualize how each architecture causes differences in generated shapes.</p>
 		    </div>
 		    <div class="margin-right-block">
 		    </div>
 		</div>
 
-		<div class="content-margin-container" id="conclusion">
-			<div class="margin-left-block">
-			</div>
-		<div class="main-content-block">
-					<h1>Conclusion</h1>
-					Let's end with the conclusion.
-		</div>
-		<div class="margin-right-block">
-		</div>
-	</div>
+
 
 		<div class="content-margin-container" id="acknowledgements">
 			<div class="margin-left-block">
