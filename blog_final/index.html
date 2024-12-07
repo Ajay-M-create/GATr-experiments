@@ -293,7 +293,7 @@
 						Here, we subject the GATr to a variety of challenging tasks that test its spatial reasoning capabilities compared to a standard transformer baseline. The official implementation extends the repository from <a href="#ref_3">[3]</a>
 						which itself is an extension of the original GATr implementation of <a href="#ref_2">[2]</a> to large biomedical meshes.
 						<br><br>
-						The official implementation can be found <a href="https://github.com/Ajay-M-create/lab-gatr-exp">here</a>
+						The official implementation can be found <a href="https://github.com/Ajay-M-create/GATr-experiments">here</a>
 		    </div>
 		    <div class="margin-right-block">
 						Figure 1. A diagram of the morphometric diffusion model architecture. The Morphometric Diffusion Model generates realistic geometries with desired features. It can use a transformer backbone instead of a classical U-net architecture in its reverse diffusion process to learn the denoising process.
@@ -311,6 +311,10 @@
 		Geometric Algebra provides a unified mathematical framework for representing and manipulating geometric objects and transformations.
 		The specific algebra G(3,0,1) used in <a href="#ref_1">[1]</a> is a 4-dimensional algebra that extends 3D Euclidean space with a homogeneous coordinate, enabling projective geometry operations.
 		In G(3,0,1), geometric objects like points, lines, and planes are represented as multivectors.<br><br>
+
+		The GATr begins by taking a set of geometric objects and embedding them as multivectors in G(3,0,1). The data is then passed into the GATr architecture,
+		which acts as a mapping from a multivector space to another multivector space. The output multivector set allows for the extraction of the desired scalar output from it's scalar dimension (0th component).
+		<br><br>
 
 		The algebra provides natural operations for geometric transformations through the geometric product, which unifies inner and outer products.
 		This allows rotations, translations, and other transformations to be represented as elements of the algebra and applied through multiplication, rather than through matrices. The geometric product between vectors a and b is defined as:<br><br>
@@ -337,7 +341,7 @@
           </center>
 
 
-		<p>where the first term is the inner product and the second term is the outer product. GATr is built on the geometric algebra G(3,0,1), which utilizes projective geometry by appending a fourth coordinate to 3D space. This allows translations to be expressed as linear maps. At its core, geometric algebra introduces an associative (but not commutative) geometric product of vectors y,z, denoted simply as yz.</p>
+		<p>where the first term is the inner product and the second term is the outer product.</p>
 
 		<p>Given a 4D orthogonal basis {e<sub>i</sub>}<sub>i</sub>, it holds that e<sub>0</sub>e<sub>0</sub> = 0, e<sub>i</sub>e<sub>i</sub> = 1 (i ≠ 0), and e<sub>i</sub>e<sub>j</sub> = -e<sub>j</sub>e<sub>i</sub> (i ≠ j). All possible linearly independent geometric products span a 16-dimensional vector space of multivectors x ∈ G(3,0,1), structured as:</p>
 
@@ -456,7 +460,7 @@
 		</div>
 
 		<p>In this framework, both geometric objects and operations are represented as multivectors. Mathematically, we can represent any transformation as a series of reflections,
-			and if we choose the right basis, we can represent any reflection as a simple multiplication of geometric vectors. This is extremely powerful since it simplifies the procedure for performing complex
+			and if the right basis is chosen, we can represent any reflection as a simple multiplication of geometric vectors. This is extremely powerful since it simplifies the procedure for performing complex
 			geometric operations. Therefore, doing our analysis using Geometric Algebra should make more efficient use of computational resources for geometric operations. </p>
 		</div>
 		</div>
@@ -504,7 +508,7 @@
 				</div>
 		    <div class="main-content-block">
 						<h1>Experiments</h1>
-						<h2>Experimental Setup</h2>
+						<h2>Datasets</h2>
 						<p>
 						To test the hypothesis, a series of geometric reasoning tasks with increasing complexity were designed.
 						First, three datasets were created: 10000 instances each of 5-point convex hulls, 10-point convex hulls, and 20-point convex hulls.
@@ -516,11 +520,58 @@
 		    </div>
 		    <div class="margin-right-block">
 						Figure 2. A visualization of the 3D convex hulls used in the experiments.
+						The top row shows the 5-point convex hulls, the middle row shows the 10-point convex hulls,
+						and the bottom row shows the 20-point convex hulls. The volume, surface area, and symmetry score of each
+						shape is shown above each corresponding convex hull.
+		    </div>
+		</div>
+
+		<div class="content-margin-container" id="experiments_details">
+			<div class="margin-left-block">
+			</div>
+		<div class="main-content-block">
+					<h2>Experimental Setup</h2>
+					<p>
+						Both transformer architectures were trained on 5,000 instances each of 5-point, 10-point, and 20-point convex hulls,
+						with each model independently learning to predict volume, surface area, and symmetry scores.
+
+						They each use 12 sequential transformer blocks to process geometric data, with more blocks enabling more complex transformations using a deeper network.
+						The architectures differ in how they represent and process the input:
+
+						<ul>
+							<li><b>GATr:</b> Embeds the points in the convex hull as 16-dimensional multivectors through:
+								<ul>
+									<li>32 hidden and 16 output multivector channels for geometric operations</li>
+									<li>256 hidden channels for scalar features</li>
+									<li>Outputs a multivector with a scalar dimension representing the volume, surface area, or symmetry score through gradient backpropagation</li>
+								</ul>
+							</li>
+							<li><b>Standard Transformer:</b> Processes 3D points directly through:
+								<ul>
+									<li>3 input channels (x,y,z coordinates)</li>
+									<li>8 attention heads per block for learning point relationships</li>
+									<li>128 hidden channels</li>
+									<li>Outputs a single scalar value representing the volume, surface area, or symmetry score</li>
+								</ul>
+							</li>
+						</ul>
+
+						The same hyperparameters were used for all tasks, with each model trained for 10,000 steps. The MSE and MAE losses were calculated for the GATr and the standard transformer every 1000 steps.
+						An accuracy plot was generated for the validation set every 1000 steps and also for the test set at the end of training. Results from the validation set were used for hyperparameter tuning initially,
+						which is how the hyperparameters above were determined.
+
+					</p>
+
+		    </div>
+		    <div class="margin-right-block">
+						Figure 2. A visualization of the 3D convex hulls used in the experiments.
 						The leftmost column shows the 5-point convex hulls, the middle column shows the 10-point convex hulls,
 						and the rightmost column shows the 20-point convex hulls. The volume, surface area, and symmetry score of each
 						shape is shown above each corresponding convex hull.
 		    </div>
 		</div>
+
+
 
 		<div class="content-margin-container" id="results">
 				<div class="margin-left-block">
@@ -528,9 +579,12 @@
 		    <div class="main-content-block">
 						<h1>Results</h1>
 
-						<h2>Performance Comparison</h2>
+						Here, the major qualitative and quantitative results are summarized.
+						<br><br>
+
+						<h2>Accuracy plots</h2>
 						<p>
-						Our experiments revealed several key findings:
+						Below are the accuracy plots for the validation set and the test set across all tasks and hull sizes.
 						</p>
 
 						<ul>
@@ -557,7 +611,8 @@
 
 		    </div>
 		    <div class="margin-right-block">
-						The results demonstrate GATr's superior performance on complex geometric reasoning tasks while maintaining computational efficiency.
+				Full results can be found in the Github repository under /tmp/gatr-experiments/experiments/"task_name"/"model_run_name"/metrics
+				where "task_name" is the name of the task (e.g. volume, surface_area, symmetry) and "model_run_name" is the name of the model run (e.g. gatr_volume_10, transformer_volume_20, etc.).
 		    </div>
 		</div>
 
@@ -586,6 +641,28 @@
 		    <div class="margin-right-block">
 		    </div>
 		</div>
+
+		<div class="content-margin-container" id="conclusion">
+			<div class="margin-left-block">
+			</div>
+		<div class="main-content-block">
+					<h1>Conclusion</h1>
+					Let's end with the conclusion.
+		</div>
+		<div class="margin-right-block">
+		</div>
+	</div>
+
+		<div class="content-margin-container" id="acknowledgements">
+			<div class="margin-left-block">
+			</div>
+		<div class="main-content-block">
+					<h1>Acknowledgements</h1>
+					I would like to thank the 6.7960 course staff for their guidance and support throughout this project. I would also like to thank my labmates for their helpful discussions and feedback.
+		</div>
+		<div class="margin-right-block">
+		</div>
+	</div>
 
 		<div class="content-margin-container" id="citations">
 				<div class="margin-left-block">
