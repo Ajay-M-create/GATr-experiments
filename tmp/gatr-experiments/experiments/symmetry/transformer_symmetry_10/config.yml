@@ -1,0 +1,58 @@
+model:
+  _target_: gatr.experiments.symmetry.wrappers.SymmetryTransformerWrapper
+  net:
+    _target_: gatr.baselines.BaselineTransformer
+    in_channels: 3
+    out_channels: 1
+    hidden_channels: 128
+    num_blocks: 12
+    num_heads: 8
+    pos_encoding: false
+exp_name: symmetry
+run_name: transformer_symmetry_10
+base_dir: /home/ajay/GATr-experiments/tmp/gatr-experiments
+exp_dir: ${base_dir}/experiments/${exp_name}/${run_name}
+seed: 42
+debug: false
+checkpoint: null
+data:
+  data_dir: /home/ajay/GATr-experiments/tmp/gatr-experiments/data/symmetry_10
+  num_points: 5
+  subsample: 0.01
+  mv_channels_in: 1
+  mv_channels_out: 1
+  scalar_channels_in: 1
+  scalar_channels_out: 1
+  baseline_channels_in: 7
+  baseline_channels_out: 3
+  geobaseline_vec_channels_in: 2
+  geobaseline_vec_channels_out: 1
+  geobaseline_s_channels_in: 1
+  geobaseline_s_channels_out: 0
+training:
+  output_regularization: 0.01
+  steps: 5000
+  batchsize: 64
+  eval_batchsize: 64
+  lr: 0.0003
+  lr_decay: 0.01
+  clip_grad_norm: 10.0
+  weight_decay: 0.0
+  early_stopping: true
+  float16: false
+  ema: false
+  log_every_n_steps: 100
+  validate_every_n_steps: 1000
+  plot_every_n_steps: 1000
+  save_model_every_n_steps: 0
+  update_lr_every_n_steps: 1000
+  eval_device: cuda
+  progressbar: true
+  detect_anomaly: false
+  force_xformers: false
+  enable_flash_sdp: false
+  enable_math_sdp: true
+  enable_mem_efficient_sdp: false
+mlflow:
+  db: ${base_dir}/tracking/mlflow.db
+  artifacts: ${base_dir}/tracking/artifacts

@@ -61,3 +61,6 @@
 [2024-12-07 01:00:14 I] Starting training
 [2024-12-07 01:00:14 I] Training for 5000 steps, that is, 313 epochs on a dataset of size 1000 with batchsize 64
 [2024-12-07 01:00:15 I] Finished first forward pass with loss 1.0054504871368408
+[2024-12-07 01:03:04 I] Starting validation at step 1000
+[2024-12-07 01:03:08 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20/metrics/predictions_vs_actuals_val.png
+[2024-12-07 01:03:09 I] Saved predictions vs actuals plot for 'val' at /home/ajay/GATr-experiments/tmp/gatr-experiments/experiments/volume/gatr_volume_20/metrics/predictions_vs_actuals_val_step_1000.png
