@@ -238,7 +238,7 @@
 					</div>
 		</div>
 
-		<div class="content-margin-container" id="intro">
+		<div class="content-margin-container">
 				<div class="margin-left-block">
           <!-- table of contents here -->
           <div style="position:fixed; max-width:inherit; top:max(20%,120px)">
@@ -249,8 +249,8 @@
 			  <a href="#experiments">Experiments</a><br><br>
 			  <a href="#results">Results</a><br><br>
               <a href="#implications_and_limitations">Implications and limitations</a><br><br>
-			  <a href="#conclusion">Conclusion</a><br><br>
-			  <a href="#citations">Citations</a><br><br>
+			  <a href="#acknowledgements">Acknowledgements</a><br><br>
+			  <a href="#references">References</a><br><br>
           </div>
 				</div>
 		    <div class="main-content-block">
@@ -288,15 +288,12 @@
 						could enhance the diffusion model's understanding of 3D morphology, enabling a more accurate representation of
 						complex structure. In the context of morphometric diffusion models, this could be useful for generating realistic 3D anatomic shapes which are intrinsically complex.
 						<br><br>
-						This project aims to investigate the spatial reasoning capabilities of GATrs by testing them on a variety of
+						This project aims to investigate the spatial reasoning capabilities of GATr by testing the architecture on a variety of
 						geometric reasoning tasks. It aims to characterize how the GATr's geometric reasoning capability scales with problem complexity.
-						Here, we subject the GATr to a variety of challenging tasks that test its spatial reasoning capabilities compared to a standard transformer baseline. The official implementation extends the repository from <a href="#ref_3">[3]</a>
-						which itself is an extension of the original GATr implementation of <a href="#ref_2">[2]</a> to large biomedical meshes.
-						<br><br>
-						The official implementation can be found <a href="https://github.com/Ajay-M-create/GATr-experiments">here</a>
+						Here, we subject the GATr to a variety of challenging tasks that test its spatial reasoning capabilities compared to a standard transformer baseline. The official implementation extends the repository from <a href="#ref_2">[2]</a> and <a href="#ref_8">[8]</a> and can be found <a href="https://github.com/Ajay-M-create/GATr-experiments">here</a>.
 		    </div>
 		    <div class="margin-right-block">
-						Figure 1. A diagram of the morphometric diffusion model architecture. The Morphometric Diffusion Model generates realistic geometries with desired features. It can use a transformer backbone instead of a classical U-net architecture in its reverse diffusion process to learn the denoising process.
+						Figure 1. A diagram of the morphometric diffusion model architecture. The morphometric diffusion model generates realistic geometries with desired features. It can use a transformer backbone instead of a classical U-net architecture in its reverse diffusion process to learn the denoising process.
 		    </div>
 		</div>
 
@@ -309,15 +306,16 @@
 
 		<h2>Geometric Algebra G(3,0,1)</h2>
 		Geometric Algebra provides a unified mathematical framework for representing and manipulating geometric objects and transformations.
-		The specific algebra G(3,0,1) used in <a href="#ref_1">[1]</a> is a 4-dimensional algebra that extends 3D Euclidean space with a homogeneous coordinate, enabling projective geometry operations.
-		In G(3,0,1), geometric objects like points, lines, and planes are represented as multivectors.<br><br>
+		The specific algebra G(3,0,1) used in <a href="#ref_2">[2]</a> is a 4-dimensional algebra that extends 3D Euclidean space with a homogeneous coordinate, enabling projective geometry operations.
+		In G(3,0,1), geometric objects such as points, lines, and planes are represented as multivectors.<br><br>
 
-		The GATr begins by taking a set of geometric objects and embedding them as multivectors in G(3,0,1). The data is then passed into the GATr architecture,
-		which acts as a mapping from a multivector space to another multivector space. The output multivector set allows for the extraction of the desired scalar output from it's scalar dimension (0th component).
+		The GATr begins by taking a set of geometric objects and embedding them as 16-dimensional multivectors in G(3,0,1). The data is then passed into the GATr architecture,
+		which can be imagined as a mapping from one multivector space to another multivector space of the same dimension. The output multivector set allows for the extraction of the desired scalar output from it's scalar dimension (0th component).
 		<br><br>
 
 		The algebra provides natural operations for geometric transformations through the geometric product, which unifies inner and outer products.
-		This allows rotations, translations, and other transformations to be represented as elements of the algebra and applied through multiplication, rather than through matrices. The geometric product between vectors a and b is defined as:<br><br>
+		This allows rotations, translations, and other transformations to be represented as elements of the algebra and applied through <b>vector multiplication</b>, rather than through higher-dimensional and computationally expensive <b>matrix multiplication</b>.
+		The geometric product between vectors a and b is defined as:<br><br>
 
           <center>
             <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -343,10 +341,12 @@
 
 		<p>where the first term is the inner product and the second term is the outer product.</p>
 
-		<p>Given a 4D orthogonal basis {e<sub>i</sub>}<sub>i</sub>, it holds that e<sub>0</sub>e<sub>0</sub> = 0, e<sub>i</sub>e<sub>i</sub> = 1 (i ≠ 0), and e<sub>i</sub>e<sub>j</sub> = -e<sub>j</sub>e<sub>i</sub> (i ≠ j). All possible linearly independent geometric products span a 16-dimensional vector space of multivectors x ∈ G(3,0,1), structured as:</p>
+		<p>Given a 4D orthogonal basis {e<sub>i</sub>}<sub>i</sub>, it holds that e<sub>0</sub>e<sub>0</sub> = 0, e<sub>i</sub>e<sub>i</sub> = 1 (i ≠ 0), and e<sub>i</sub>e<sub>j</sub> = -e<sub>j</sub>e<sub>i</sub> (i ≠ j).
+		This means parallel basis vectors have magnitude 0, orthogonal basis vectors have magnitude 1, and two vectors anticommute (swap signs when multiplied in reverse order).
+		All possible linearly independent geometric products span a 16-dimensional vector space of multivectors x ∈ G(3,0,1), structured as:</p>
 
 		<p>x = (
-			<span style="color: #2020B0">x<sub>s</sub></span>,
+			<span style="color: #4040FF">x<sub>s</sub></span>,
 			<span style="color: #20B020">x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub></span>,
 			<span style="color: #B02020">x<sub>01</sub>, x<sub>02</sub>, x<sub>03</sub>, x<sub>12</sub>, x<sub>13</sub>, x<sub>23</sub></span>,
 			<span style="color: #B0B020">x<sub>012</sub>, x<sub>013</sub>, x<sub>023</sub>, x<sub>123</sub></span>,
@@ -354,135 +354,142 @@
 
 		<p>where:</p>
 		<ul>
-			<li><span style="color: #2020B0">Scalar component</span></li>
+			<li><span style="color: #4040FF">Scalar component</span></li>
 			<li><span style="color: #20B020">Vector components</span></li>
 			<li><span style="color: #B02020">Bivector components</span></li>
 			<li><span style="color: #B0B020">Trivector components</span></li>
 		</ul>
 
-		<p>Using this structure, different geometric objects can be represented as follows:</p>
-
-		<div class="table-container" style="display: flex; align-items: flex-start;">
-			<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; text-align: center; margin-right: 20px;">
-				<thead>
-					<tr>
-						<th>Object / operator</th>
-						<th>Scalar</th>
-						<th>Vector<br>e<sub>0</sub>, e<sub>i</sub></th>
-						<th>Bivector<br>e<sub>0i</sub>, e<sub>ij</sub></th>
-						<th>Trivector<br>e<sub>0ij</sub>, e<sub>123</sub></th>
-						<th>PS<br>e<sub>0123</sub></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Scalar λ ∈ ℝ</td>
-						<td>λ</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Plane w/ normal n ∈ ℝ³, origin shift d ∈ ℝ</td>
-						<td>0</td>
-						<td>d, n</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Line w/ direction n ∈ ℝ³, orthogonal shift s ∈ ℝ³</td>
-						<td>0</td>
-						<td>0</td>
-						<td>s, n</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Point p ∈ ℝ³</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>p, 1</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Pseudoscalar μ ∈ ℝ</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>μ</td>
-					</tr>
-					<tr>
-						<td colspan="6"><strong>Transformations</strong></td>
-					</tr>
-					<tr>
-						<td>Reflection through plane w/ normal n ∈ ℝ³, origin shift d ∈ ℝ</td>
-						<td>0</td>
-						<td>d, n</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Translation t ∈ ℝ³</td>
-						<td>1</td>
-						<td>0</td>
-						<td>½t, 0</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Rotation expressed as quaternion q ∈ ℝ⁴</td>
-						<td>q<sub>0</sub></td>
-						<td>0</td>
-						<td>0,q<sub>i</sub></td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Point reflection through p ∈ ℝ³</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>p, 1</td>
-						<td>0</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<div class="table-caption" style="flex: 1; padding-left: 20px;">
-				<strong>Table 1:</strong> Table taken from <a href="#ref_2">[2]</a>. This is a lookup table of different euclidean objects and operations represented as multivectors in G(3,0,1).
-				It explains how the multivector embedding of geometric objects and operations can be entirely represented by multivectors.
-			</div>
-		</div>
 
 		<p>In this framework, both geometric objects and operations are represented as multivectors. Mathematically, we can represent any transformation as a series of reflections,
 			and if the right basis is chosen, we can represent any reflection as a simple multiplication of geometric vectors. This is extremely powerful since it simplifies the procedure for performing complex
 			geometric operations. Therefore, doing our analysis using Geometric Algebra should make more efficient use of computational resources for geometric operations. </p>
 		</div>
+
+
+		</div>
+
+		<div class="content-margin-container">
+			<div class="margin-left-block">
+			</div>
+
+			<div class="main-content-block">
+				<p>Using this structure, different geometric objects can be represented as follows:</p>
+				<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; text-align: center; margin: 0 auto;">
+					<thead>
+						<tr>
+							<th>Object / operator</th>
+							<th>Scalar</th>
+							<th>Vector<br>e<sub>0</sub>, e<sub>i</sub></th>
+							<th>Bivector<br>e<sub>0i</sub>, e<sub>ij</sub></th>
+							<th>Trivector<br>e<sub>0ij</sub>, e<sub>123</sub></th>
+							<th>PS<br>e<sub>0123</sub></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Scalar λ ∈ ℝ</td>
+							<td>λ</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Plane w/ normal n ∈ ℝ³, origin shift d ∈ ℝ</td>
+							<td>0</td>
+							<td>d, n</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Line w/ direction n ∈ ℝ³, orthogonal shift s ∈ ℝ³</td>
+							<td>0</td>
+							<td>0</td>
+							<td>s, n</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Point p ∈ ℝ³</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>p, 1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Pseudoscalar μ ∈ ℝ</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>μ</td>
+						</tr>
+						<tr>
+							<td colspan="6"><strong>Transformations</strong></td>
+						</tr>
+						<tr>
+							<td>Reflection through plane w/ normal n ∈ ℝ³, origin shift d ∈ ℝ</td>
+							<td>0</td>
+							<td>d, n</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Translation t ∈ ℝ³</td>
+							<td>1</td>
+							<td>0</td>
+							<td>½t, 0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Rotation expressed as quaternion q ∈ ℝ⁴</td>
+							<td>q<sub>0</sub></td>
+							<td>0</td>
+							<td>0,q<sub>i</sub></td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Point reflection through p ∈ ℝ³</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>p, 1</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="margin-right-block">
+				<strong>Table 1:</strong> Table provided in <a href="#ref_2">[2]</a>. This is a lookup table of different euclidean objects and operations represented as multivectors in G(3,0,1).
+				It explains how the multivector embedding of geometric objects and operations can be entirely represented by multivectors.
+			</div>
 		</div>
 
 		<div class="content-margin-container" id="Literature Review">
 			<div class="margin-left-block">
 			</div>
 		<div class="main-content-block">
-		<h1>Previous Work</h1>
+		<h2>Previous Work</h2>
 		    <p>
 				Since the GATr is a new architecture, its characteristics have not been deeply studied.
-				The original authors showed that the GATr could be used to efficiently represent geometric data and outperform other baselines in terms of error, data efficiency, and scalability <a href="#ref_2">[2]</a>. However, different avenues of research
-				have been exploring the use of Geometric Algebra in different domains. One group has developed "Lab-GATr" which can learn transformations on large biomedical meshes <a href="#ref_3">[3]</a>, and another has developed "L-GATr" which embeds high energy physics data as multivectors <a href="#ref_5">[5]</a>. They have shown success
-				in learning large meshes with 200,000 vertices. Another group extended GATrs for large 3D meshes by employing cross-attention to project data onto a coarser vertex set <a href="#ref_4">[4]</a>.
+				The original authors showed that the GATr could be used to efficiently represent geometric data and outperform other baselines in terms of error, data efficiency, and scalability for the nbody problem and artery shear and stress calculations <a href="#ref_2">[2]</a>. However, different avenues of research
+				have been exploring the use of Geometric Algebra in different domains. One group has developed "Lab-GATr" which can learn transformations on large biomedical meshes <a href="#ref_3">[3]</a>, and another has developed "L-GATr" which embeds high energy physics data as multivectors <a href="#ref_5">[5]</a>.
+				Another group extended GATr for large 3D meshes by employing cross-attention to project data onto a coarser vertex set <a href="#ref_4">[4]</a>.
 				Geometric Algebra modeling itself has been explored by several groups in building machine learning networks <a href="#ref_6">[6]</a>, <a href="#ref_7">[7]</a>.
 
-				Currently there is a lot of interest in using GATr for a variety of tasks, especially in biomedical analysis and physics simulations.
-				Despite there being results that GATrs may perform well at scale, there is not yet a clear understanding of how the GATr's geometric reasoning capability scales with problem complexity.
-				This project tries to bridge this gap in understanding by testing the GATr on a variety of geometric reasoning tasks of increasing complexity.
+				<p>Currently there is a lot of interest in using GATr for a variety of tasks, especially in biomedical analysis and physics simulations.
+				Despite there being results that GATr may perform well at scale, there is not yet a clear understanding of how the GATr's geometric reasoning capability scales with problem complexity.
+				This project tries to bridge this gap in understanding by testing the GATr on a variety of geometric reasoning tasks of increasing complexity.</p>
 
-				Understanding how GATrs perform depending on the complexity of the task is important to understand their strengths and weaknesses. In the context of morphometric diffusion models, understanding GATr's performance in reasoning through challenging tasks
-				may give us insight into whether it can be useful in generating realistic complex 3D shapes.
+				<p>Understanding how GATr performs depending on the complexity of the task is important to understand their strengths and weaknesses. In the context of morphometric diffusion models, understanding GATr's performance in reasoning through challenging tasks
+				may give us insight into whether it can be useful in generating realistic complex 3D shapes.</p>
 		    </p>
 		</div>
 	</div>
@@ -495,9 +502,9 @@
 			<p>
 				<p>We would like to test the following hypothesis:</p>
 
-				<p><b>Hypothesis:</b> While standard transformers may reason through simple geometric reasoning tasks well, Geometric Algebra Transformers (GATrs) will perform better than standard transformers on geometric reasoning tasks of increasing complexity.</p>
+				<p><b>Hypothesis:</b> While standard transformers may reason through simple geometric reasoning tasks well, the Geometric Algebra Transformer (GATr) architecture will perform better than standard transformers on geometric reasoning tasks of increasing complexity.</p>
 
-				<p>This is because GATrs are built on the framework of Geometric Algebra, which provides a more natural framework for representing and manipulating geometric objects and transformations.
+				<p>This is because GATr is built on the framework of Geometric Algebra, which provides a more natural framework for representing and manipulating geometric objects and transformations.
 				Standard transformers, on the other hand, are built on the framework of linear algebra and matrix multiplication, which may not be as natural for representing and manipulating geometric objects and transformations. </p>
 			</p>
 		</div>
@@ -512,9 +519,12 @@
 						<p>
 						To test the hypothesis, a series of geometric reasoning tasks with increasing complexity were designed.
 						First, three datasets were created: 10000 instances each of 5-point convex hulls, 10-point convex hulls, and 20-point convex hulls.
-						The surface area, volume, and symmetry score of each shape was computed. Both the GATr and the standard transformer were trained to reason about the volume,
-						surface area, and symmetry score of a set of 3D shapes.
+						The surface area, volume, and symmetry score of each shape was computed.
+						The surface-area task was seen as the easiest since it can simply add up the areas of all planar faces.
+						The volume task was set as the medium level difficulty task, since it would be harder to infer the volume from just the points,
+						and the symmetry score was set as the hardest task since it requires reasoning about the arrangement of points in 3D space and more complex arithmetic.
 						</p>
+
 						<img src="./images/convex_hulls_comparison.png" width=800px/>
 
 		    </div>
@@ -583,15 +593,18 @@
 						The animations below show the evolution of the training process over three different steps for both the GATr and the standard transformer.
 						The n_points variable represents the number of points in the convex hull used to train the model.
 
-						Full results for every timestep can be found in the Github repository under:
-						<pre style="margin-left: auto; margin-right: auto; width: fit-content;">gatr-experiments/
-└── experiments/
-    └── {task_name}/        # e.g. volume, surface_area, symmetry
-        └── {model_run}/    # e.g. gatr_volume_10, transformer_volume_20
-            └── metrics/</pre>
+						Full results for every timestep can be found in the <a href="https://github.com/Ajay-M-create/GATr-experiments">Github</a> repository under:
+						<pre style="margin-left: auto; margin-right: auto; width: fit-content;">tmp/
+└── gatr-experiments/
+    └── experiments/
+        └── {task_name}/        # e.g. volume, surface_area, symmetry
+            └── {model_run}/    # e.g. gatr_volume_10, transformer_volume_20
+            	└── metrics/</pre>
+
 
 
 						<center>
+							<p><b>Hover over the videos below to see the animations.</b></p>
 							<video class='transformer-video' loop autoplay muted style="width: 800px">
 								<source src="./images/Transformer_acc.mp4" type="video/mp4">
 							</video>
@@ -656,44 +669,44 @@
 					<tr>
 						<td><b>MSE</b></td>
 						<td>7.44e-5</td>
-						<td style="background-color: #e6ffe6">2.00e-5</td>
+						<td style="background-color: #e6ffe6; color: black">2.00e-5</td>
 						<td>4.43e-4</td>
-						<td style="background-color: #e6ffe6">5.42e-5</td>
+						<td style="background-color: #e6ffe6; color: black">5.42e-5</td>
 						<td>2.91e-3</td>
-						<td style="background-color: #e6ffe6">8.28e-5</td>
+						<td style="background-color: #e6ffe6; color: black">8.28e-5</td>
 						<td>1.99e-3</td>
-						<td style="background-color: #e6ffe6">1.99e-4</td>
+						<td style="background-color: #e6ffe6; color: black">1.99e-4</td>
 						<td>2.77e-2</td>
-						<td style="background-color: #e6ffe6">3.57e-4</td>
+						<td style="background-color: #e6ffe6; color: black">3.57e-4</td>
 						<td>1.91e-1</td>
-						<td style="background-color: #e6ffe6">4.50e-4</td>
-						<td>4.08e-4</td>
-						<td style="background-color: #e6ffe6">5.42e-4</td>
+						<td style="background-color: #e6ffe6; color: black">4.50e-4</td>
+						<td style="background-color: #e6ffe6; color: black">4.08e-4</td>
+						<td>5.42e-4</td>
 						<td>1.05e-3</td>
-						<td style="background-color: #e6ffe6">1.03e-3</td>
+						<td style="background-color: #e6ffe6; color: black">1.03e-3</td>
 						<td>3.99e-3</td>
-						<td style="background-color: #e6ffe6">1.47e-3</td>
+						<td style="background-color: #e6ffe6; color: black">1.47e-3</td>
 					</tr>
 					<tr>
 						<td><b>MAE</b></td>
 						<td>6.09e-3</td>
-						<td style="background-color: #e6ffe6">3.35e-3</td>
+						<td style="background-color: #e6ffe6; color: black">3.35e-3</td>
 						<td>1.83e-2</td>
-						<td style="background-color: #e6ffe6">5.74e-3</td>
+						<td style="background-color: #e6ffe6; color: black">5.74e-3</td>
 						<td>5.23e-2</td>
-						<td style="background-color: #e6ffe6">7.21e-3</td>
+						<td style="background-color: #e6ffe6; color: black">7.21e-3</td>
 						<td>4.08e-2</td>
-						<td style="background-color: #e6ffe6">1.08e-2</td>
+						<td style="background-color: #e6ffe6; color: black">1.08e-2</td>
 						<td>1.62e-1</td>
-						<td style="background-color: #e6ffe6">1.49e-2</td>
+						<td style="background-color: #e6ffe6; color: black">1.49e-2</td>
 						<td>4.33e-1</td>
-						<td style="background-color: #e6ffe6">1.69e-2</td>
-						<td>1.34e-2</td>
-						<td style="background-color: #e6ffe6">1.58e-2</td>
+						<td style="background-color: #e6ffe6; color: black">1.69e-2</td>
+						<td style="background-color: #e6ffe6; color: black">1.34e-2</td>
+						<td>1.58e-2</td>
 						<td>2.48e-2</td>
-						<td style="background-color: #e6ffe6">2.47e-2</td>
+						<td style="background-color: #e6ffe6; color: black">2.47e-2</td>
 						<td>5.01e-2</td>
-						<td style="background-color: #e6ffe6">3.04e-2</td>
+						<td style="background-color: #e6ffe6; color: black">3.04e-2</td>
 					</tr>
 				</tbody>
 			</table>
@@ -710,34 +723,38 @@
 				</div>
 		    <div class="main-content-block">
 						<h1>Implications and limitations</h1>
-						Contrary to our hypothesis, it appears that the standard transformer performed better than the GATr on all tasks.
-						While the GATr was able to learn to predict the volume, surface area, and symmetry score of the convex hulls to some capacity, it did not outperform the standard transformer.
+						Contrary to our hypothesis, the standard transformer significantly outperformed the GATr on the simpler geometric tasks of surface area and volume prediction. However, the results for the symmetry score task showed mixed results that may provide insight into how these architectures handle increasing complexity.
 
 						<h2>Analysis of Numerical Results</h2>
 						Looking at the numerical results in Table 2:
 
 						<ul>
-							<li><b>Volume Prediction:</b> For 5-point hulls, both models performed well, with MSEs of 7.44e-5 (GATr) vs 2.00e-5 (Transformer). However, as complexity increased to 20 points, the GATr's error grew significantly (MSE: 2.91e-3) while the Transformer maintained good performance (MSE: 8.28e-5).</li>
+							<li><b>Volume and Surface Area (Simple Tasks):</b> The standard transformer consistently outperformed the GATr by a significant margin. For 20-point hulls, the GATr's surface area MSE (1.91e-1) was several orders of magnitude higher than the Transformer's (4.50e-4). Similarly for volume, the GATr's MSE (2.91e-3) was much higher than the Transformer's (8.28e-5).</li>
 
-							<li><b>Surface Area:</b> The performance gap was even greater for surface area calculations. With 20-point hulls, the GATr's MSE (1.91e-1) was several orders of magnitude higher than the Transformer's (4.50e-4), suggesting this task was particularly difficult for the Geometric Algebra Transformer.</li>
-
-							<li><b>Symmetry Score:</b> Both models struggled with symmetry predictions, but the Transformer consistently maintained slightly better performance. For 20-point hulls, the GATr's MSE (3.99e-3) was nearly triple the Transformer's (1.47e-3), but was roughly the same for 5-point and 10-point hulls.</li>
+							<li><b>Symmetry Score (Complex Task):</b> Interestingly, we observed mixed performance on the symmetry score prediction:
+								<ul>
+									<li>For 5-point hulls, the GATr performed slightly better than the standard transformer</li>
+									<li>At 10 points, both models showed comparable performance</li>
+									<li>At 20 points, both models struggled significantly, though the transformer maintained a slight edge (MSE: 1.47e-3 vs 3.99e-3)</li>
+								</ul>
+							</li>
 						</ul>
 
-						This was especially surprising given that the GATr had more available parameters and was able to learn the different tasks to some capacity.
-						However, it is possible that the standard transformer is just better at learning these particular tasks.
-
-						These tasks were much simpler than the Nbody and arterial mesh tasks that the GATr was able to learn in the original paper, so it may be possible to see the GATr outperform the standard transformer on tasks with higher order difficulty.
-
-						<p>One possible explanation for this is that embedding the convex point hulls as point multivectors was not the best way to represent the data.
-						While the GATr was able to learn to represent the geometric operations through its embedding space, it may not be taking full advantage of this extra representational power.
-						On the other hand, the standard transformer may be more effective at leveraging its linear operations to learn these specific geometric properties.
-						The consistent pattern of increasing error with point cloud size suggests that the GATr's multivector representation might introduce additional complexity that makes it harder to scale to larger point sets, at least for these particular geometric calculations.
+						<p>These results suggest an interesting pattern: while the standard transformer appears superior for simpler geometric calculations, the relative performance on the more complex symmetry task shows potential promise for the GATr architecture. The fact that the GATr performed better on the symmetry task with smaller point clouds, before degrading with larger ones, hints that its geometric algebra representation might offer advantages for certain types of complex geometric reasoning.
 						</p>
 
+						<p>One possible explanation is that the multivector representation, while theoretically powerful, may introduce unnecessary complexity for straightforward geometric calculations like volume and surface area, which is underutilizing the 16-dimensional representation for a 3-D problem. However, for more sophisticated geometric reasoning tasks, this same representation might become advantageous if properly leveraged. The mixed performance on the symmetry task, particularly the GATr's superior performance with smaller point sets, suggests that there might be specific problem domains where the GATr's geometric algebra approach could prove more effective than standard transformers.
+						</p>
+
+						<h2>Limitations</h2>
+
+						<p>In this experiment, we did not account for proper control of resources rigorously. An effort was made to choose model hyperarameters that would make the two models more comparable, but there are clearly hyperparameter choices that would make one model perform better than the other.
+						During training, the GATr took 8-10x as long as the standard transformer to train and an order of magnitude more parameters available. So, the comparison is likely to not be fair. However, this was a similar setup used in the original GATr paper for nbody simulations, so it is a good starting point for this experiment.
+						For future work, controlling for resources rigorously would be important to make a fair comparison between the two models and better assess the GATr's performance.
+						</p>
 
 						<h2>Future Work</h2>
-						<p>This preliminary study suggests that GATrs may not be the best choice for a transformer within a morphometric diffusion model, at least for these particular tasks. However, they still may be useful in tasks similar to the Nbody and arterial mesh tasks.
+						<p>This preliminary study suggests that GATr may not be the best choice for a transformer architecture within a morphometric diffusion model when reasoning through simple geometric tasks. However, they still may be useful in more challenging tasks like the symmetry score prediction, nbody simulation, and arterial mesh tasks.
 						Therefore, the next step would be to explore how the multivectors evolve over the course of training to see if the GATr is making use of the extra representational power of the multivectors.
 						Next, it would be interersting to implement the GATr in a morphometric diffusion model and visualize how each architecture causes differences in generated shapes.</p>
 		    </div>
@@ -768,9 +785,10 @@
 							<a id="ref_2"></a>[2] <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/6f6dd92b03ff9be7468a6104611c9187-Paper-Conference.pdf">Geometric Algebra Transformer</a>, Johann Brehmer, Pim De Haan, Sönke Behrends, and Taco S Cohen. "Geometric algebra transformer." Advances in Neural Information Processing Systems, 36, 2024.<br><br>
 							<a id="ref_3"></a>[3] <a href="https://github.com/sukjulian/lab-gatr">LaB-GATr</a>, Suk, Julian, Baris Imre, and Jelmer M. Wolterink. "LaB-GATr: geometric algebra transformers for large biomedical surface and volume meshes." International Conference on Medical Image Computing and Computer-Assisted Intervention. Cham: Springer Nature Switzerland, 2024.<br><br>
 							<a id="ref_4"></a>[4] <a href="https://openreview.net/pdf?id=T2bBUlaJTA">Geometric algebra transformers for large 3D meshes via cross-attention</a>, Suk J, De Haan P, Imre B, Wolterink JM. Geometric algebra transformers for large 3d meshes via cross-attention. InICML 2024 Workshop on Geometry-grounded Representation Learning and Generative Modeling 2024.<br><br>
-							<a id="ref_5"></a>[5] <a href="https://arxiv.org/pdf/2405.14806"> Lorentz-Equivariant Geometric Algebra Transformers for High-Energy Physics</a>, Spinner J, Bresó V, de Haan P, Plehn T, Thaler J, Brehmer J. Lorentz-Equivariant Geometric Algebra Transformers for High-Energy Physics. arXiv preprint arXiv:2405.14806. 2024 May 23.<br><br>
+							<a id="ref_5"></a>[5] <a href="https://arxiv.org/pdf/2405.14806">Lorentz-Equivariant Geometric Algebra Transformers for High-Energy Physics</a>, Spinner J, Bresó V, de Haan P, Plehn T, Thaler J, Brehmer J. Lorentz-Equivariant Geometric Algebra Transformers for High-Energy Physics. arXiv preprint arXiv:2405.14806. 2024 May 23.<br><br>
 							<a id="ref_6"></a>[6] <a href="https://arxiv.org/pdf/2110.02393.pdf">Geometric algebra attention networks for small point clouds</a>, Spellings, Matthew. "Geometric algebra attention networks for small point clouds." arXiv preprint arXiv:2110.02393 (2021).<br><br>
 							<a id="ref_7"></a>[7] <a href="https://arxiv.org/pdf/2206.03589.pdf">Using a graph transformer network to predict 3d coordinates of proteins via Geometric Algebra modelling</a>, Pepe, Alberto, Joan Lasenby, and Pablo Chacon. "Using a graph transformer network to predict 3d coordinates of proteins via Geometric Algebra modelling." International Workshop on Empowering Novel Geometric Algebra for Graphics and Engineering. Cham: Springer Nature Switzerland, 2022.<br><br>
+							<a id="ref_8"></a>[8] <a href="https://arxiv.org/abs/2311.04744">Euclidean, Projective, Conformal: Choosing a Geometric Algebra for Equivariant Transformers</a>, de Haan P, Cohen T, Brehmer J. Euclidean, Projective, Conformal: Choosing a Geometric Algebra for Equivariant Transformers. Proceedings of the 27th International Conference on Artificial Intelligence and Statistics. 2024;27.<br><br>
 						</div>
 		    </div>
 		    <div class="margin-right-block">
