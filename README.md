@@ -4,7 +4,8 @@ Author: Ajay Manicka
 
 This repository investigates the spatial reasoning capabilities of Geometric Algebra Transformers (GATr) by testing the architecture on geometric reasoning tasks of increasing complexity. It extends the official implementation of the [**Geometric Algebra Transformer**](https://github.com/Qualcomm-AI-research/geometric-algebra-transformer/tree/main) by [Johann Brehmer](mailto:jbrehmer@qti.qualcomm.com), Pim de Haan, Sönke Behrends, and Taco Cohen, published at NeurIPS 2023.
 
-![GATr = geometric algebra representations + equivariant layers + Transformer architecture](img/gatr.png)
+![intro_graphic](https://github.com/user-attachments/assets/33e2384d-9a12-49a7-960e-a2ce0596ddd3)
+
 
 ## 1 Motivation
 
