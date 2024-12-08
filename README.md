@@ -1,4 +1,4 @@
-# Understanding complex geometric reasoning with Geometric Algebra Transformers
+# Understanding Complex Geometric Reasoning with Geometric Algebra Transformers
 
 Author: Ajay Manicka
 
