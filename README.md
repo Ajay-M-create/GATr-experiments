@@ -1,6 +1,4 @@
-# GATr-experiments
-
-# Geometric Algebra Transformers
+# Understanding complex geometric reasoning with Geometric Algebra Transformers
 
 Author: Ajay Manicka
 
